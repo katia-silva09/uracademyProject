@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from . import models
 
-
+"""
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.UserLocal
@@ -12,8 +12,6 @@ class UserSerializer(serializers.ModelSerializer):
             super(UserSerializer, self).__init__(*args, **kwargs)
             self.Meta.depth = 1
 
-
-
 class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.UserLocal
@@ -22,26 +20,7 @@ class UserDetailSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
             super(UserSerializer, self).__init__(*args, **kwargs)
             self.Meta.depth = 1 
-                 
-class CourseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.Course
-        fields = ('id', 'title', 'details', 'duration', 'image', 'url')
-        
-        
-    def __init__(self, *args, **kwargs):
-            super(CourseSerializer, self).__init__(*args, **kwargs)
-            self.Meta.depth = 1
-            
-
-class CourseDetailSerializer(serializers.ModelSerializer):
-            class Meta:
-                model = models.Course
-                fields = ('id', 'title', 'details', 'duration', 'image', 'url')
-                
-            def __init__(self, *args, **kwargs):
-                    super(CourseDetailSerializer, self).__init__(*args, **kwargs)
-                    self.Meta.depth = 1  
+"""                 
 
 class InstructorSerializer(serializers.ModelSerializer):
             class Meta:
@@ -62,6 +41,36 @@ class InstructorDetailSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
             super(InstructorDetailSerializer, self).__init__(*args, **kwargs)
             self.Meta.depth = 1
+
+class CategoryCourseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.CategoryCourse
+        fields = ('id',  'title', 'detail')
+
+    def __init__(self,*args, **kwargs):
+        super(CategoryCourseSerializer, self).__init__(*args, **kwargs)
+        self.Meta.depth = 1
+class CourseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Course
+        fields = ('id','instructor', 'category', 'title', 'details', 'duration', 'image', 'url')
+        
+        
+    def __init__(self, *args, **kwargs):
+            super(CourseSerializer, self).__init__(*args, **kwargs)
+            self.Meta.depth = 1
+            
+
+class CourseDetailSerializer(serializers.ModelSerializer):
+            class Meta:
+                model = models.Course
+                fields = ('id','instructor', 'title', 'details', 'duration', 'image', 'url')
+                
+            def __init__(self, *args, **kwargs):
+                    super(CourseDetailSerializer, self).__init__(*args, **kwargs)
+                    self.Meta.depth = 1  
+
+
             
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
@@ -87,7 +96,7 @@ class DocumentationSerializer(serializers.ModelSerializer):
         fields = ('id','title', 'description', 'image', 'url') 
 
     def __init__(self, *args, **kwargs):
-        super(DocumentationSerializer, self).__init__(*args, *kwargs)
+        super(DocumentationSerializer, self).__init__(*args, **kwargs)
         self.Meta.depth =1
         
         
