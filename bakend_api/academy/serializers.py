@@ -108,4 +108,5 @@ class DocumentationDetailSerializer(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
         super(DocumentationDetailSerializer, self).__init__(*args, **kwargs)
         self.Meta.depth = 1
+
             
