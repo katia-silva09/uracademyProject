@@ -57,3 +57,11 @@ class DocumentationList(generics.ListCreateAPIView):
 class DocumentationDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Documentation.objects.all()
     serializer_class = serializers.DocumentationDetailSerializer       
+    
+class CustomerList(generics.ListCreateAPIView):
+    queryset = models.Customer.objects.all()
+    serializer_class = serializers. CustomerSerializer
+   #permission_classes = [permissions.IsAuthenticated]
+   
+    
+    
