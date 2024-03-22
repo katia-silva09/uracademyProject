@@ -19,6 +19,11 @@ urlpatterns = [
     path('blogs/', views.BlogList.as_view()),
     path('blog/<int:pk>/', views.BlogDetail.as_view()),
     
+    #documentation
     path('documentations', views.DocumentationList.as_view()),
     path('documentation/<int:pk>/', views.DocumentationDetail.as_view()),
+    
+    #customer
+    path('customers/', views.CustomerList.as_view()),
+    path('customer/<pk:int>', views.CustomerDetail.as_view())
 ]

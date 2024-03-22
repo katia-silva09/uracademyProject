@@ -5,7 +5,7 @@ class Instructor(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null= False)
     last_name = models.CharField(max_length=20)
-    image = models.ImageField()
+    #image = models.ImageField()
     description = models.TextField(blank=False)
     cv = models.URLField(null=True)
     linkedin=  models.URLField(null=True)
@@ -30,7 +30,7 @@ class Course(models.Model):
     title = models.CharField(max_length=200)
     details = models.TextField(blank=False, max_length=200)
     duration = models.CharField(max_length=100)
-    image = models.ImageField(null=True)
+    #image = models.ImageField(null=True)
     
     
     def __str__(self):
@@ -39,12 +39,12 @@ class Course(models.Model):
 class Documentation (models.Model):
     title = models.TextField(max_length=200)
     description = models.TextField(null=False, max_length=200)
-    image = models.ImageField(null=True)
+    #image = models.ImageField(null=True)
     url = models.URLField(null=True)
 
     def __str__(self):
         return self.title
-    
+#informative Blog  
 class Blog (models.Model):
     title = models.CharField(max_length=200, null = False)
     description = models.TextField(null=False)
@@ -56,8 +56,16 @@ class Blog (models.Model):
 class  Customer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null = False)
-    email = models.EmailField(null=False, max_length=100)
+    #email = models.EmailField(null=False, max_length=100)
     image = models.ImageField(null=True)
     cellphone = models.PositiveBigIntegerField(max_length=20)
+
+
+class Order(models.Model):
+    Customer= models.ForeignKey(Customer, on_delete=models.CASCADE)
+    detail = models.TextField(null=False)
+        
     
+class OrderItems (models.Model):
+    order_items= models.ForeignKey(Order, on_delete= models.CASCADE)
     
