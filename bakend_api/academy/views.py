@@ -63,5 +63,15 @@ class CustomerList(generics.ListCreateAPIView):
     serializer_class = serializers. CustomerSerializer
    #permission_classes = [permissions.IsAuthenticated]
    
+class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset= models.Customer.objects.all() 
+    serializer_class= serializers. CustomerDetailSerializer
     
+class OrderList(generics.ListCreateAPIView):
+    queryset = models.Order.objects.all()
+    serializer_class= serializers. OrderSerializer
+    
+class OrderDetail(generics.RetrieveUpdateDestroyAPIView): 
+    queryset = models.OrderItems.objects.all()
+    serializer_class = serializers.OrderDetailSerializer         
     
