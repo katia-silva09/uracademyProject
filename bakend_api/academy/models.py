@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Instructor(models.Model):
-    #user = models.ForeignKey(User,on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null= False)
     last_name = models.CharField(max_length=20)
     #image = models.ImageField()
@@ -27,8 +27,8 @@ class CategoryCourse(models.Model):
 
 #course muestra la variante de curso de la categoria, es decir, interfaz de cursos ofertados por una entidad.    
 class Course(models.Model):
-    category = models.ForeignKey(CategoryCourse, on_delete=models.SET_NULL, null=True,  related_name ='course_category')
-    instructor = models.ForeignKey(Instructor, on_delete=models.SET_NULL, null=True, related_name='instructor')
+    instructor = models.ForeignKey(Instructor, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(CategoryCourse, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=200)
     details = models.TextField(blank=False, max_length=200)
     duration = models.CharField(max_length=100)
@@ -50,27 +50,35 @@ class Documentation (models.Model):
     
 #informative Blog  
 class Blog (models.Model):
-    title = models.CharField(max_length=200, null = False)
-    description = models.TextField(null=False)
-    url = models.URLField(null = False)
+    title = models.CharField(max_length=200, blank=True)
+    description = models.TextField(blank=True)
+    url = models.URLField(blank= True)
     
     def __str__(self):
         return self.title
 
 #representa el cliente o usuario    
 class  Customer(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     name = models.CharField(max_length=50, null = False)
-    #email = models.EmailField(null=False, max_length=100)
-    image = models.ImageField(null=True)
+    email = models.EmailField(blank=True)
+    #image = models.ImageField(null=True)
     cellphone = models.PositiveBigIntegerField()
+    
+    def __str__(self):
+        return self.name
+    
 
 
 class Order(models.Model):
-    Customer= models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer= models.ForeignKey(Customer, on_delete=models.CASCADE)
+    order_time=  models.DateTimeField(auto_now_add=True)
     detail = models.TextField(null=False)
         
     
 class OrderItems (models.Model):
     order_items= models.ForeignKey(Order, on_delete= models.CASCADE)
+    course=models.ForeignKey(Course, on_delete=models.CASCADE)
     
+    def __init__(self):
+        return self.course.title
