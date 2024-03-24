@@ -34,7 +34,7 @@ class CategoryCourseSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Course
-        fields = ('id','instructor', 'category', 'title', 'details', 'duration', 'image')
+        fields = ('id','instructor', 'category', 'title', 'details', 'duration')
         
         
     def __init__(self, *args, **kwargs):
@@ -45,7 +45,7 @@ class CourseSerializer(serializers.ModelSerializer):
 class CourseDetailSerializer(serializers.ModelSerializer):
             class Meta:
                 model = models.Course
-                fields = ('id','instructor', 'title', 'details', 'duration', 'image')
+                fields = ('id','instructor', 'title', 'details', 'duration')
                 
             def __init__(self, *args, **kwargs):
                     super(CourseDetailSerializer, self).__init__(*args, **kwargs)
