@@ -25,5 +25,5 @@ urlpatterns = [
     
     #customer
     path('customers/', views.CustomerList.as_view()),
-    path('customer/<pk:int>', views.CustomerDetail.as_view())
+    path('customer/<int:pk>', views.CustomerDetail.as_view())
 ]
