@@ -111,10 +111,15 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Order
         fields = ('id', 'customer', 'detail')
-        #depth = 1
+        
+    
+       
 
 class OrderDetailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.OrderItems
+        model = models.OrderCourses
         fields = ('id', 'order_items', 'course')
-        #depth = 1
+        
+    def __init__(self,*args, **kwargs):
+        super(OrderDetailSerializer,self).__init__(*args, **kwargs)
+        self.Meta.depth = 1 
