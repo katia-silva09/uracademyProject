@@ -84,5 +84,5 @@ class OrderCourses (models.Model):
     order_items= models.ForeignKey(Order, on_delete= models.CASCADE)
     course=models.ForeignKey(Course, on_delete=models.CASCADE)
     
-    def __init__(self):
+    def __str__(self):
         return self.course.title
