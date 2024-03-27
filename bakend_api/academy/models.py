@@ -32,6 +32,7 @@ class Course(models.Model):
     title = models.CharField(max_length=200)
     details = models.TextField(blank=False, max_length=200)
     duration = models.CharField(max_length=100)
+    price  = models.FloatField(null=True)
     #image = models.ImageField(null=True)
     
     
@@ -74,9 +75,12 @@ class Order(models.Model):
     customer= models.ForeignKey(Customer, on_delete=models.CASCADE)
     order_time=  models.DateTimeField(auto_now_add=True)
     detail = models.TextField(null=False)
+    
+    def __unicode__(self):
+        return '%s' %(self.order_time)
         
     
-class OrderItems (models.Model):
+class OrderCourses (models.Model):
     order_items= models.ForeignKey(Order, on_delete= models.CASCADE)
     course=models.ForeignKey(Course, on_delete=models.CASCADE)
     

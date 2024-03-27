@@ -72,6 +72,12 @@ class OrderList(generics.ListCreateAPIView):
     serializer_class= serializers.OrderSerializer
     
 class OrderDetail(generics.RetrieveUpdateDestroyAPIView): 
-    queryset = models.OrderItems.objects.all()
+    #queryset = models.OrderItems.objects.all()
     serializer_class = serializers.OrderDetailSerializer         
     
+    
+    def get_queryset(self):
+        order_id=  self.kwargs['pk']
+        order= models.Order.objects.get(id=order_id)
+        order_items = models.OrderCourses.objects.filter(order=order)
+        return order_items
