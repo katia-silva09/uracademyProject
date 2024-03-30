@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 class Instructor(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null= False)
-    last_name = models.CharField(max_length=20)
     #image = models.ImageField()
     description = models.TextField(blank=False)
     cv = models.URLField(null=True)
@@ -13,7 +12,7 @@ class Instructor(models.Model):
     
     
     def __str__(self):
-        return self.name 
+        return self.name
 
 
 #la categoria del curso, ejemplo: ciberseguridad, desarrollo web, administracion de servidores, entre otros.
@@ -60,19 +59,18 @@ class Blog (models.Model):
 
 #representa el cliente o usuario    
 class  Customer(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
-    name = models.CharField(max_length=50, null = False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField(blank=True)
     #image = models.ImageField(null=True)
-    cellphone = models.PositiveBigIntegerField()
+    cellphone = models.PositiveBigIntegerField(unique=True)
     
     def __str__(self):
-        return self.name
+        return self.user.username
     
 
 
 class Order(models.Model):
-    customer= models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer= models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='order_items')
     order_time=  models.DateTimeField(auto_now_add=True)
     detail = models.TextField(null=False)
     
@@ -81,7 +79,7 @@ class Order(models.Model):
         
     
 class OrderCourses (models.Model):
-    order_items= models.ForeignKey(Order, on_delete= models.CASCADE)
+    order= models.ForeignKey(Order, on_delete= models.CASCADE, related_name='order_items')
     course=models.ForeignKey(Course, on_delete=models.CASCADE)
     
     def __str__(self):

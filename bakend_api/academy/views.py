@@ -5,19 +5,6 @@ from . import models
 # Create your views here.
 
 
-"""
-class UserList(generics.ListCreateAPIView):
-    queryset = models.UserLocal.objects.all()
-    serializer_class = serializers.UserSerializer
-
-class UserDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.UserLocal.objects.all()
-    serializer_class = serializers.UserDetailSerializer
-"""
-
-
-
-
 class InstructorList(generics.ListCreateAPIView):
     queryset =models.Instructor.objects.all()
     serializer_class = serializers.InstructorSerializer
@@ -71,7 +58,7 @@ class OrderList(generics.ListCreateAPIView):
     queryset = models.Order.objects.all()
     serializer_class= serializers.OrderSerializer
     
-class OrderDetail(generics.ListAPIView): 
+class OrderDetail(generics.RetrieveUpdateDestroyAPIView): 
     #queryset = models.OrderItems.objects.all()
     serializer_class = serializers.OrderDetailSerializer         
     
