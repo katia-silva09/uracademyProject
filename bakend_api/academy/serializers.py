@@ -6,7 +6,7 @@ from . import models
 class InstructorSerializer(serializers.ModelSerializer):
             class Meta:
                 model = models.Instructor
-                fields = ('id','user','name', 'last_name', 'description','cv', 'linkedin', 'github')
+                fields = ('id','user','description','cv', 'linkedin', 'github')
 
             def __init__(self, *args, **kwargs):
                 super(InstructorSerializer, self).__init__(*args, **kwargs)
@@ -16,7 +16,7 @@ class InstructorSerializer(serializers.ModelSerializer):
 class InstructorDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Instructor
-        fields =('id','user', 'name', 'last_name','description', 'cv', 'linkedin', 'github')
+        fields =('id','user','description', 'cv', 'linkedin', 'github')
         
         
     def __init__(self, *args, **kwargs):
