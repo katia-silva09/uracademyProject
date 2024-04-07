@@ -119,9 +119,9 @@ class OrderSerializer(serializers.ModelSerializer):
 
 class OrderDetailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.OrderCourses
+        model = models.OrderCourses 
         fields = ('id', 'course', 'order')
         
     def __init__(self,*args, **kwargs):
         super(OrderDetailSerializer,self).__init__(*args, **kwargs)
-        #self.Meta.depth = 1 
+        self.Meta.depth = 1 
