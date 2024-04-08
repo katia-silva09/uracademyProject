@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, pagination
 from . import serializers
 from . import models
 # Create your views here.
@@ -58,7 +58,7 @@ class OrderList(generics.ListCreateAPIView):
     queryset = models.Order.objects.all()
     serializer_class= serializers.OrderSerializer
     
-class OrderDetail(generics.RetrieveUpdateDestroyAPIView): 
+class OrderDetail(generics.ListAPIView): 
     serializer_class = serializers.OrderDetailSerializer         
     
     def get_queryset(self):
