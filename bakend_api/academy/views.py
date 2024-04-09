@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics, pagination
+from rest_framework import generics, pagination, viewsets
 from . import serializers
 from . import models
 # Create your views here.
@@ -66,3 +66,7 @@ class OrderDetail(generics.ListAPIView):
         order= models.Order.objects.get(id=order_id)
         order_items = models.OrderCourses.objects.filter(order=order)
         return order_items
+    
+class CourseRatingViewSet(viewsets.ModelViewSet):
+    queryset = models.CoursesRating.objects.all()
+    serializer_class= serializers.CourseRatingSerializer
