@@ -85,3 +85,14 @@ class OrderCourses (models.Model):
     def __str__(self):
         return self.course.title
     
+    
+class CoursesRating(models.Model):
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='customer_ratings') 
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='course_ratings')
+    instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE, related_name='instructor_ratings')
+    rating = models.IntegerField()
+    reviews = models.TextField()
+    add_time = models.DateTimeField(auto_now_add=True)
+        
+    def __str__(self):
+        return f'{self.rating} - {self.reviews}'

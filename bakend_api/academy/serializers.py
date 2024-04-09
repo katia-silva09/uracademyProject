@@ -6,7 +6,7 @@ from . import models
 class InstructorSerializer(serializers.ModelSerializer):
             class Meta:
                 model = models.Instructor
-                fields = ('id','user','description','cv', 'linkedin', 'github')
+                fields = ('id','user','description','cv', 'linkedin', 'github', 'instructor_ratings')
 
             def __init__(self, *args, **kwargs):
                 super(InstructorSerializer, self).__init__(*args, **kwargs)
@@ -34,7 +34,7 @@ class CategoryCourseSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Course
-        fields = ('id','instructor', 'category', 'title', 'details', 'duration')
+        fields = ('id','instructor', 'category', 'title', 'details', 'duration', 'course_ratings')
         
         
     def __init__(self, *args, **kwargs):
@@ -91,7 +91,7 @@ class DocumentationDetailSerializer(serializers.ModelSerializer):
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model=models.Customer
-        fields=('id','user','email', 'cellphone')
+        fields=('id','user','email', 'cellphone', 'customer_ratings')
         
     def __init__(self,*args,**kwargs):
         super(CustomerSerializer,self).__init__(*args, **kwargs)    
@@ -125,3 +125,12 @@ class OrderDetailSerializer(serializers.ModelSerializer):
     def __init__(self,*args, **kwargs):
         super(OrderDetailSerializer,self).__init__(*args, **kwargs)
         self.Meta.depth = 1 
+        
+class CourseRatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.CoursesRating
+        fields = ['id','customer', 'course', 'instructor', 'rating', 'reviews', 'add_time']
+        
+    def __init__(self, *args, **kwargs):
+        super(CourseRatingSerializer, self).__init__(*args, **kwargs)
+        self.Meta.depth =1 

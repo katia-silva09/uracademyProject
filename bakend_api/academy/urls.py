@@ -1,5 +1,10 @@
 from django.urls import path
 from . import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('courserating', views.CourseRatingViewSet)
+
 
 urlpatterns = [
     #path('users/', views.UserList.as_view()),   
@@ -29,3 +34,6 @@ urlpatterns = [
     path('orders/',  views.OrderList.as_view()),
     path('order/<int:pk>', views.OrderDetail.as_view())
 ]
+
+urlpatterns += router.urls
+
