@@ -34,8 +34,8 @@ function App() {
       </nav>
 
 <main className='mt-4'>
-        <div className="container text-center">
-        <h3 className='mb-4'>Latest courses<a href="#" className="float-end btn btn-dark"> View Courses <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
+        <div className="container">
+        <h3 className='mt-4'>Latest courses<a href="#" className="float-end btn btn-dark"> View Courses <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
         <div className="row">
           {/* Courses Box */}
             <div className="col-12 col-md-3 mb-2">    
@@ -45,9 +45,9 @@ function App() {
                 <h4 className="card-title text-center">Php</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+              </div>
               </div>
             </div>
             </div>
@@ -61,9 +61,10 @@ function App() {
                 <h4 className="card-title text-center">Laravel</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i className="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+              </div>
+                 
               </div>
             </div>
             </div>
@@ -78,9 +79,9 @@ function App() {
                 <h4 className="card-title text-center">Python</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+              </div>
               </div>
             </div>
             </div>
@@ -94,9 +95,9 @@ function App() {
                 <h4 className="card-title text-center">Django</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
+                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+              </div>
               </div>
             </div>
             </div>
@@ -110,9 +111,9 @@ function App() {
                 <h4 className="card-title text-center">Node.js</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+              </div>
               </div>
             </div>
             </div>
@@ -126,9 +127,9 @@ function App() {
                 <h4 className="card-title text-center">Html</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>
-              <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
+                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
               <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+              </div>
               </div>
             </div>
             </div>
@@ -142,9 +143,9 @@ function App() {
                 <h4 className="card-title text-center">React</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
+                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
+               <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
               </div>
-              <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
-              <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
               </div>
             </div>
             </div>
@@ -158,9 +159,9 @@ function App() {
                 <h4 className="card-title text-center">JavaScript</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-              </div>  
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+              </div>  
               </div>
             </div>
             </div>
@@ -177,9 +178,9 @@ function App() {
               <div className="card-body">
                 <h4 className="card-title text-center">stackoverflow</h4>
                 <div className="card-footer">
-              </div>
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>              
+                  <button title="Agregar me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button> 
+              </div>             
              </div>
             </div>
             </div>
@@ -192,8 +193,10 @@ function App() {
               <div className="card-body">
                 <h4 className="card-title text-center">Smashing Magazine</h4>
                 <div className="card-footer">
+                 <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
+                 <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
               </div>
-              <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+
               </div>
             </div>
             </div>
@@ -211,9 +214,9 @@ function App() {
               <div className="card-body">
                 <h4 className="card-title text-center">Django Documentation</h4>
                 <div className="card-footer">
-              </div>
                   <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+              </div>
               </div>
             </div>
             </div>
@@ -225,9 +228,10 @@ function App() {
               <img src={logo} className="card-img-top" alt="..."/>
               <div className="card-body">
                 <h4 className="card-title text-center">Bootstrap Documentation</h4>
-                <div className="card-footer">
-              </div>
-              <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+               <div className="card-footer">
+                 <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
+                 <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+               </div>
               </div>
             </div>
             </div>
@@ -320,12 +324,7 @@ function App() {
                     </li>
                 </ul>
           </footer>
-
-        {/* end futer */}
-
-
-
-
+        {/* end footer */}
         </div>
       </div>
 </main>
