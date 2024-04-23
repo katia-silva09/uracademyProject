@@ -1,5 +1,5 @@
 import logo from '../logo.svg'
-
+import python from '../python.svg'
 
 function Home(){
     return(
@@ -44,7 +44,9 @@ function Home(){
 
             <div className="col-12 col-md-3 mb-2">    
             <div className="card">
-              <img src={ logo } className="card-img-top" alt="..." />
+              <div className='text-center'>
+              <img src={ python } className="card-img-top text-center" style={{ maxWidth:'70%'}} alt="..." />
+              </div>
               <div className="card-body">
                 <h4 className="card-title text-center">Python</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
@@ -113,8 +115,8 @@ function Home(){
                 <h4 className="card-title text-center">React</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
-               <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
+               <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm-2 ms-1'> <i className="fa fa-heart"></i></button>
               </div>
               </div>
             </div>
@@ -129,85 +131,110 @@ function Home(){
                 <h4 className="card-title text-center">JavaScript</h4>
                 <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
                 <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
+                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-cart-arrow-down"></i></button>
+                  <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm-2 ms-2'> <i className="fa fa-heart"></i></button>
               </div>  
               </div>
             </div>
             </div>
               {/* Courses Box end */}
 
-        {/* Blogs populares */}
+        {/* categorias populares */}
 
-        <h3 className='mb-4'>Popular Blogs<a href="#" className="float-end btn btn-dark"> View Blogs <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
+        <h3 className='mb-4'>Popular categories<a href="#" className="float-end btn btn-dark"> View Categories <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
         <div className="row">
-          {/* Courses Box */}
+          {/* category Box */}
             <div className="col-12 col-md-3 mb-2">    
             <div className="card">
               <img src={logo} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center">stackoverflow</h4>
-                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button> 
-              </div>             
+                <h4 className="card-title text-center">Cybersecurity</h4>
+                <div className="card-footer">Course download 250650</div>             
              </div>
             </div>
             </div>
-              {/* Courses Box end */}
+              {/* Category Box end */}
 
-          {/* Courses Box */}
+          {/* Category Box */}
             <div className="col-12 col-md-3 mb-2">    
             <div className="card">
               <img src={logo} className="card-img-top" alt="..."/>
               <div className="card-body">
-                <h4 className="card-title text-center">Smashing Magazine</h4>
-                <div className="card-footer">
-                 <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
-                 <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
-              </div>
+                <h4 className="card-title text-center">Programming</h4>
+                <div className="card-footer">Course download 25500</div>
 
               </div>
             </div>
             </div>
             </div>
-            {/* end blogs populares */}
-              {/* Courses Box end */}
-        {/* Documentation populares */}
+            {/* Category Box end */}
 
-        <h3 className='mb-4'>Popular documentations<a href="#" className="float-end btn btn-dark"> View Documentation <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
+            {/* end category populares */}
+
+        {/* Instructor populares */}
+
+        <h3 className='mb-4'>Popular instructor<a href="#" className="float-end btn btn-dark"> View instructor <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
         <div className="row">
-          {/* Courses Box */}
+          {/* instructor Box */}
             <div className="col-12 col-md-3 mb-2">    
             <div className="card">
               <img src={logo} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center">Django</h4>
+                <h4 className="card-title text-center">Marlon Peralta</h4>
                 <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>                  
+                 <button title="Agregar medalla" className= 'btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
               </div>
               </div>
             </div>
             </div>
-              {/* Courses Box end */}
+              {/* instructor Box end */}
 
-          {/* Courses Box */}
+          {/* instructor Box */}
             <div className="col-12 col-md-3 mb-2">    
             <div className="card">
               <img src={logo} className="card-img-top" alt="..."/>
               <div className="card-body">
-                <h4 className="card-title text-center">Bootstrap</h4>
+                <h4 className="card-title text-center">Darwin Salinas</h4>
                <div className="card-footer">
-                 <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
-                 <button title="Agregar a me gusta" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
+               <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>                  
+                 <button title="Agregar medalla" className= 'btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
                </div>
               </div>
             </div>
             </div>
+              {/* instructor Box end */}
+          {/* instructor Box */}
+          <div className="col-12 col-md-3 mb-2">    
+            <div className="card">
+              <img src={logo} className="card-img-top" alt="..."/>
+              <div className="card-body">
+                <h4 className="card-title text-center">Eliseo Davila</h4>
+               <div className="card-footer">
+               <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>                  
+                 <button title="Agregar medalla" className= 'btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
+               </div>
+              </div>
             </div>
-            {/* end blogs populares */}
-              {/* Courses Box end */}
+            </div>
+            {/* instructor Box end */}
+                      {/* instructor Box */}
+                      <div className="col-12 col-md-3 mb-2">    
+            <div className="card">
+              <img src={logo} className="card-img-top" alt="..."/>
+              <div className="card-body">
+                <h4 className="card-title text-center">Bryan Alvarado</h4>
+               <div className="card-footer">
+               <button title="Agregar al carrito" className= 'btn btn-primary btn-sm-2'><i class="fa-solid fa-eye"></i></button>                  
+                 <button title="Agregar medalla" className= 'btn btn-warning btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
+               </div>
+              </div>
+            </div>
+            </div>
+            {/* instructor Box end */}
+            </div>
+            {/* end instructor populares */}
+
 
 
         {/* Carusel */}
@@ -249,12 +276,12 @@ function Home(){
               <div className="carousel-item">
                 <figure className="text-center">
                     <blockquote className="blockquote">
-                      <p>A well-known quote, contained in a blockquote element.</p>
+                      <p>"Uracademy ha sido de gran ayuda para mi desarrollo como programador"</p>
                     </blockquote>
                     <figcaption className="blockquote-footer">
                       <i className='fa fa-star text-warning'></i>
                       <i className='fa fa-star text-warning'></i>
-                      <cite title="Source Title"> Users Name</cite>
+                      <cite title="Source Title">Randy Arguello</cite>
                     </figcaption>
                 </figure>
               </div>
