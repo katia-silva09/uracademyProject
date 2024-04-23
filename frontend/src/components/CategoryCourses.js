@@ -1,24 +1,15 @@
-import logo from '../logo.svg'
-import { Link } from 'react-router-dom'
-function Categories(){
-return(
-    <section className="container">
-        {/* categorias populares */}
+import SingleProduct from './SingleProducts';
 
-        <h3 className='mt-4'>Popular categories</h3> 
-        <div className="row mb-4">
-          {/* category Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center"><Link to="/category/cybersecurity/1">Cybersecurity</Link></h4>             
-             </div>
-             <div className="card-footer">Course Downloads 202345</div>
+function CategoryCourses(){
+    return(
+        <section className="container">
+            <h3 className="mb-4"><span className="text-success">Courses python</span></h3>
+            <div className="row mb-4">
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Flask"/>
+                <SingleProduct title="Django Rest Framework"/>
             </div>
-            </div>
-              {/* Category Box end */}
-            </div>
+            {/* end product section */}
 
             {/* PAGINATION */}
             <nav aria-label="Page navigation example">
@@ -39,8 +30,8 @@ return(
                 </ul>
             </nav>
             {/* END PAGINATION */}
-    </section>
-    )
+        </section>
+    );
 }
 
-export default Categories
+export default CategoryCourses
