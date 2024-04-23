@@ -13,6 +13,7 @@ function App() {
     <Header/>
     <Routes>
     <Route path='/' element={<Home />} />
+    {/* <Route path='/categories/:category_slug/:category_id' element={<CategoryCourses/>}/> */}
     </Routes>
     <Footer/>
     </>
