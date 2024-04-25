@@ -7,6 +7,8 @@ import Home from './components/Home';
 import Footer from './components/Footer'
 import Categories from './components/Categories';
 import CategoryCourses from './components/CategoryCourses';
+import AllProducts from './components/AllProducts';
+import CourseDetail from './components/CourseDetail';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
     <Route path='/' element={<Home />} />
     <Route path='categories' element={<Categories/>}/>
     <Route path='/category/:category_slug/:category_id' element={<CategoryCourses/>}/>
+    <Route path='courses' element={<AllProducts/>}/>
+    <Route path='/course/:course_slug/:course_id' element={<CourseDetail/>}/>
     </Routes>
     <Footer/>
     </>
