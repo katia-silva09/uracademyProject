@@ -1,143 +1,19 @@
 import logo from '../logo.svg'
 import python from '../python.svg'
+import { Link } from "react-router-dom"
+import SingleProduct from './SingleProducts';
 
 function Home(){
     return(
         <main className='mt-4'>
         <div className="container">
-        <h3 className='mt-4'>Latest courses<a href="#" className="float-end btn btn-dark"> View Courses <i className="fa-solid fa-arrow-right-long"></i></a></h3> 
-        <div className="row">
-          {/* Courses Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center">Php</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
-              </div>
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-          {/* Courses Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..."/>
-              <div className="card-body">
-                <h4 className="card-title text-center">Laravel</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i className="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
-              </div>
-                 
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-          {/* Courses Box */}
-
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <div className='text-center'>
-              <img src={ python } className="card-img-top text-center" style={{ maxWidth:'70%'}} alt="..." />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title text-center">Python</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
-              </div>
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-          {/* Courses Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center">Django</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
-              </div>
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-          {/* Courses Box */}
-          <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center">Node.js</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
-              </div>
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-              {/* Courses Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center">Html</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
-              <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm ms-1'> <i className="fa fa-heart"></i></button>
-              </div>
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-              {/* Courses Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center">React</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-cart-arrow-down"></i></button>                  
-               <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm-2 ms-1'> <i className="fa fa-heart"></i></button>
-              </div>
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
-
-              {/* Courses Box */}
-            <div className="col-12 col-md-3 mb-2">    
-            <div className="card">
-              <img src={logo} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h4 className="card-title text-center">JavaScript</h4>
-                <h5 className="card-title text-muted text-center">Precio: C$500.00</h5>
-                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm-2'><i class="fa-solid fa-cart-arrow-down"></i></button>
-                  <button title="Agregar a Me gusta" className= 'btn btn-danger btn-sm-2 ms-2'> <i className="fa fa-heart"></i></button>
-              </div>  
-              </div>
-            </div>
-            </div>
-              {/* Courses Box end */}
+          {/* latest course section */}
+        <h3 className="mt-4"> Latest Course <Link to="/course" className="float-end btn btn-dark"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
+        <div className="row mb-4">
+         <SingleProduct title="Django basic"/>
+            <SingleProduct title="Python para principiantes"/>
+            <SingleProduct title="Django rest framework "/>
+            <SingleProduct title="machine learning"/>
 
         {/* categorias populares */}
 

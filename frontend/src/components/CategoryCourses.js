@@ -3,7 +3,7 @@ import SingleProduct from './SingleProducts';
 function CategoryCourses(){
     return(
         <section className="container">
-            <h3 className="mb-4"><span className="text-success">Courses python</span></h3>
+            <h3 className="mt-4"><span className="text-success">Courses python</span></h3>
             <div className="row mb-4">
                 <SingleProduct title="Django"/>
                 <SingleProduct title="Flask"/>
