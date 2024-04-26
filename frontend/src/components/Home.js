@@ -1,5 +1,5 @@
 import logo from '../logo.svg'
-import python from '../python.svg'
+// import python from '../python.svg'
 import { Link } from "react-router-dom"
 import SingleProduct from './SingleProducts';
 
@@ -8,7 +8,7 @@ function Home(){
         <main className='mt-4'>
         <div className="container">
           {/* latest course section */}
-        <h3 className="mt-4"> Latest Course <Link to="/course" className="float-end btn btn-dark"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
+        <h3 className="mt-4"> Latest Course <Link to="/course/python-timer/123" className="float-end btn btn-dark"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row mb-4">
          <SingleProduct title="Django basic"/>
             <SingleProduct title="Python para principiantes"/>
