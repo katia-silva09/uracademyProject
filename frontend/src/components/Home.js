@@ -5,7 +5,11 @@ import SingleProduct from './SingleProducts';
 
 function Home() {
   return (
+
     <main className='mt-4'>
+
+    <main className='mt-4' >
+
       <div className="container">
 
         {/* latest course section */}
@@ -113,7 +117,11 @@ function Home() {
 
 
           {/* Carusel */}
+
           <div id="carouselExampleIndicators" className="carousel slide my-4 border bg-dark text-white p-5" data-bs-ride="true">
+
+          <div id="carouselExampleIndicators" className="carousel slide my-4 border bg-secondary text-white p-5" data-bs-ride="true">
+
             <div className="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
