@@ -33,7 +33,7 @@ function CourseDetail() {
                 aria-label="Slide 3"
               ></button>
             </div>
-            <div class="carousel-inner">
+            <div classame="carousel-inner">
               <div class="carousel-item active">
                 <img src={logo} class="img-thumbnail" alt="..." />
               </div>
@@ -71,8 +71,7 @@ function CourseDetail() {
           </div>
         </div>
         <div className="col-8">
-          <h4>Product 1</h4>
-          <p className="text-muted">Precio:$500</p>
+          <h4>React</h4>
           <p>
             Descripción: The standard chunk of Lorem Ipsum used since the 1500s
             is reproduced below for those interested. Sections 1.10.32 and
@@ -80,6 +79,7 @@ function CourseDetail() {
             reproduced in their exact original form, accompanied by English
             versions from the 1914 translation by H. Rackham.
           </p>
+          <p className="text-muted">Precio:$500</p>
           <button title="Demo" target="_blanck" className="btn btn-dark">
             <i className="fa-solid fa-cart-plus"></i>Demo
           </button>

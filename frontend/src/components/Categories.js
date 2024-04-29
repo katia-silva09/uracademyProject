@@ -1,5 +1,8 @@
-import logo from "../logo.svg";
+
 import { Link } from "react-router-dom";
+import programming from "../programacion.svg"
+import ia from "../IA.svg"
+
 function Categories() {
   return (
     <section className="container">
@@ -10,16 +13,30 @@ function Categories() {
         {/* category Box */}
         <div className="col-12 col-md-3 mb-2">
           <div className="card">
-            <img src={logo} className="card-img-top" alt="..." />
+            <img src={ programming } className="card-img-top" alt="..." />
             <div className="card-body">
               <h4 className="card-title text-center">
-                <Link to="/category/cybersecurity/1">Programming</Link>
+                <Link to="/category/programming/1">Programming</Link>
               </h4>
             </div>
             <div className="card-footer">Course Downloads 202345</div>
           </div>
         </div>
         {/* Category Box end */}
+
+                {/* category Box */}
+                <div className="col-12 col-md-3 mb-2">
+          <div className="card">
+            <img src={ ia } className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h4 className="card-title text-center">
+                <Link to="/category/cybersecurity/1">Artificial Intelligent</Link>
+              </h4>
+            </div>
+            <div className="card-footer">Course Downloads 202345</div>
+          </div>
+        </div>
+        {/* Category Box end */}      
       </div>
 
       {/* PAGINATION */}

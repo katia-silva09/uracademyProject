@@ -19,7 +19,7 @@ function Footer(){
                               <a className="text-muted" href="www.twitter.com" target='blank'><i className='fa-brands fa-twitter fa-2x'></i></a>            
                           </li>
                           <li className="ms-3">
-                              <a className="text-muted" href="www.github.com" target='blank'><i className='fa-brands fa-github fa-2x'></i></a>            
+                              <a className="text-muted" href="https://github.com/Bryan18-Alvarado" target='blank'><i className='fa-brands fa-github fa-2x'></i></a>            
                           </li>
                       </ul>
                 </footer>
