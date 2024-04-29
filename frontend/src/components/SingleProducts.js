@@ -11,7 +11,7 @@ function SingleProduct(props){
             <h4 className="card-title"><Link to="/course/python-timer/123">{props.title}</Link></h4>
               <h5 className="card-title text-muted">Precio: c$500.00</h5>
                <div className="card-footer">
-                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i class="fa-solid fa-cart-arrow-down"></i></button>
+                  <button title="Agregar al carrito" className= 'btn btn-warning btn-sm'><i className="fa-solid fa-cart-arrow-down"></i></button>
                   <button title="Agregar a la lista" className= 'btn btn-danger btn-sm ms-2'> <i className="fa fa-heart"></i></button>
               </div>
             </div>
