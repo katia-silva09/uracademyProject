@@ -25,7 +25,7 @@ function Header(){
               <li className="nav-item">
                 <a className="nav-link" href="#" style={{fontFamily:'ADLaM Display'}}>Documentation</a>
               </li>
-              {/* <button className="btn btn-danger" style={{fontFamily:'ADLaM Display'}}>Log out</button> */}
+              {/* <button className="btn btn-danger" style={{fontFamily:'ADLaM Display'}}>Logout</button> */}
             </ul>
           </div>
         </div>
