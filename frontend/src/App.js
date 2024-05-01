@@ -9,11 +9,11 @@ import Categories from './components/Categories';
 import CategoryCourses from './components/CategoryCourses';
 import AllProducts from './components/AllProducts';
 import CourseDetail from './components/CourseDetail';
-import Checkaout from './components/Checkaout';
+import Checkaout from './components/Checkout';
 
 import Register from "./components/Customer/Register";
 import Login from "./components/Customer/Login";
-import Dashboard from "./components/Customer/Deshboard";
+import Dashboard from "./components/Customer/Dashboard";
 import Orders from "./components/Customer/Orders";
 
 
