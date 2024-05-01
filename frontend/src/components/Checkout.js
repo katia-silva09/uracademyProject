@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../logo.svg"
 
-function Checkaout(props) {
+function Checkout(props) {
     return(
         <div className="container mt4">
             <h3 className="mb-4">Todos los Cursos</h3>
@@ -61,4 +61,4 @@ function Checkaout(props) {
         </div>
     );
 }
-export default Checkaout;
+export default Checkout;
