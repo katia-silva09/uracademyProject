@@ -8,7 +8,7 @@ function Header(){
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <nav class="navbar bg-body-tertiary">
+          <nav className="navbar bg-body-tertiary">
           </nav>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link className="navbar-brand"  to="/"  style={{fontFamily: 'Agbalumo'}}>URACADEMY</Link>
@@ -26,16 +26,16 @@ function Header(){
                 <a className="nav-link" href="#" style={{fontFamily:'ADLaM Display'}}>Documentation</a>
               </li>
               {/* dorpdown */}
-              <li class="nav-item dropdown"  style={{fontFamily:'ADLaM Display'}}>
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li className="nav-item dropdown"  style={{fontFamily:'ADLaM Display'}}>
+                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Mi cuenta
                         </a>
-                        <ul class="dropdown-menu" >
-                            <li><Link class="dropdown-item" style={{color: 'blue'}} to="/customer/register">Register</Link></li>
-                            <li><Link class="dropdown-item" style={{color: 'green'}} to="/customer/login">Login</Link></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><Link class="dropdown-item"  to="/customer/dashboard">Control Panel</Link></li>
-                            <li><Link class="dropdown-item" style={{color: 'red'}} to="/customer/logout">Logout</Link></li>
+                        <ul className="dropdown-menu" >
+                            <li><Link className="dropdown-item" style={{color: 'blue'}} to="/customer/register">Register</Link></li>
+                            <li><Link className="dropdown-item" style={{color: 'blue'}} to="/customer/login">Login</Link></li>
+                            <li><hr className="dropdown-divider" /></li>
+                            <li><Link className="dropdown-item"  to="/customer/dashboard">Control Panel</Link></li>
+                            <li><Link className="dropdown-item" style={{color: 'red'}} to="/customer/logout">Logout</Link></li>
                         </ul>
                     </li>
                     {/* end dropdown */}
