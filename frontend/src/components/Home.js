@@ -62,7 +62,7 @@ function Home() {
               <div className="card">
                 <img src={marlinis} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h4 className="card-title text-center">Marlon Peralta</h4>
+                  <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Marlon Peralta</h4>
                   <div className="card-footer">
                     <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                     <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
@@ -77,7 +77,7 @@ function Home() {
               <div className="card">
                 <img src={darwin} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h4 className="card-title text-center">Darwin Salinas</h4>
+                  <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Darwin Salinas</h4>
                   <div className="card-footer">
                     <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                     <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
@@ -91,7 +91,7 @@ function Home() {
               <div className="card">
                 <img src={eliseo} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h4 className="card-title text-center">Eliseo Davila</h4>
+                  <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Eliseo Davila</h4>
                   <div className="card-footer">
                     <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                     <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
@@ -105,7 +105,7 @@ function Home() {
               <div className="card">
                 <img src={perfil} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h4 className="card-title text-center">Bryan Alvarado</h4>
+                  <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Bryan Alvarado</h4>
                   <div className="card-footer">
                     <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                     <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
