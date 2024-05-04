@@ -10,14 +10,12 @@ function Footer(){
       
                       <ul className="nav col-md-4 justify-content-end list-unstyled d-flex pt-2">
                           <li className="ms-3">
-                              <a className="text-muted" href="www.linkedin.com" target='blank'><i className='fa-brands fa-linkedin fa-2x'></i></a>            
+                              <a className="text-muted" href="https://www.linkedin.com" target='blank'><i className='fa-brands fa-linkedin fa-2x'></i></a>            
                           </li>
                           <li className="ms-3">
-                              <a className="text-muted" href="www.gmail.com" target="_blank"><i className="fab fa-google fa-2x"></i></a>            
+                              <a className="text-muted" href="https://www.gmail.com" target="_blank"><i className="fab fa-google fa-2x"></i></a>            
                           </li>
-                          <li className="ms-3">
-                              <a className="text-muted" href="www.twitter.com" target='blank'><i className='fa-brands fa-twitter fa-2x'></i></a>            
-                          </li>
+
                           <li className="ms-3">
                               <a className="text-muted" href="https://github.com/Bryan18-Alvarado" target='blank'><i className='fa-brands fa-github fa-2x'></i></a>            
                           </li>
