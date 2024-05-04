@@ -17,6 +17,10 @@ import Dashboard from "./components/Customer/Dashboard";
 import Orders from "./components/Customer/Orders";
 
 
+import Blogs from "./components/Blogs/Blogs";
+import Documentation from "./components/Documentation/Documentation";
+
+
 function App() {
   return (
     <>
@@ -33,6 +37,10 @@ function App() {
     <Route path="/customer/login" element={<Login/>}/>
     <Route path="/customer/dashboard" element={<Dashboard/>}/>
     <Route path="/customer/Orders" element={<Orders/>}/>
+
+
+    <Route path="/blogs/" element={<Blogs/>}/>
+    <Route path="/documentation/" element={<Documentation/>}/>
 
     </Routes>
     <Footer/>

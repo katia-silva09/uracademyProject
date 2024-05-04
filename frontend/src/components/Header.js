@@ -20,10 +20,10 @@ function Header(){
                 <Link className="nav-link" to="/categories" style={{fontFamily:'ADLaM Display'}}>Category</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" style={{fontFamily:'ADLaM Display'}}>Blogs</a>
+              <Link className="nav-link" to="/blogs" style={{fontFamily:'ADLaM Display'}}>Blog</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" style={{fontFamily:'ADLaM Display'}}>Documentation</a>
+              <Link className="nav-link" to="/documentation" style={{fontFamily:'ADLaM Display'}}>Documentation</Link>
               </li>
               {/* dorpdown */}
               <li className="nav-item dropdown"  style={{fontFamily:'ADLaM Display'}}>
