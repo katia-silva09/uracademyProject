@@ -1,13 +1,16 @@
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import { Link } from "react-router-dom"
-import python from "../python.svg"
+// import python from "../python.svg"
+// const AcademyImages = require.context('../images/', true);
+
 
 function SingleProduct(props){
+  const { imgSrc } = props;
     return(
         <div className="col-12 col-md-3 mb-4">
       <div className="card">
         <Link to="/course/python-timer/123"></Link>
-        <img src={logo} className="card-img-top" alt="..."/>
+        <img src={imgSrc} className="card-img-top" alt="..."/>
           <div className="card-body">
             <h4 className="card-title text-center"><Link to="/course/python-timer/123" style={{fontFamily: 'ADLaM Display', color:'DarkSlateGray'}}>{props.title}</Link></h4>
               <h5 className="card-title text-muted text-center">Precio: c$500.00</h5>
