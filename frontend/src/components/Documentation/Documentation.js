@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
+const AcademyImages = require.context('../../images', true);
+
+
 
 function Documentation () {
     return(
@@ -9,7 +12,7 @@ function Documentation () {
                 {/* category Box */}
                 <div className="col-12 col-md-3 mb-2">
                 <div className="card ">
-                    <img src={ logo } className="card-img-top" alt="..." />
+                    <img src={ AcademyImages('./documentation/php_documentation.png') } className="card-img-top" alt="..." />
                     <div className="card-body">
                     <h4 className="card-title text-center">
                         <Link to="https://www.php.net/docs.php">PHP Documentation</Link>
@@ -23,7 +26,7 @@ function Documentation () {
                         {/* category Box */}
                         <div className="col-12 col-md-3 mb-2">
                 <div className="card">
-                    <img src={ logo } className="card-img-top" alt="..." />
+                    <img src={  AcademyImages('./documentation/django_documentation.png') } className="card-img-top" alt="..." />
                     <div className="card-body">
                     <h4 className="card-title text-center">
                         <Link to="https://docs.djangoproject.com/en/5.0/">Django Documentation</Link>
