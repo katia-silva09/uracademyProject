@@ -1,5 +1,4 @@
 import SingleProduct from "./SingleProducts";
-import darwin from '../darwin.svg'
 function AllProducts(){
     return(
         <section>

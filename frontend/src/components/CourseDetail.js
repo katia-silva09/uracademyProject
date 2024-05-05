@@ -1,5 +1,7 @@
 import SingleProduct from "./SingleProducts";
 import logo from "../logo.svg";
+const AcademyImages = require.context('../images', true);
+
 function CourseDetail() {
   return (
     <section className="container mt-4">
@@ -15,7 +17,7 @@ function CourseDetail() {
 
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src={logo} className="img-thumbnail mb-5 " alt="..." />
+                    <img src={AcademyImages('./courses/python.png')} className="img-thumbnail mb-5 " alt="..." />
                   <div className="carousel-item"> 
                     <img src={logo} className="img-thumbnail mb-5 " alt="..." />
                   </div>
@@ -23,14 +25,14 @@ function CourseDetail() {
                     <img src={logo} className="img-thumbnail mb-5 " alt="..." />
                   </div>
                 </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#relatedThumbnailSlider" data-bs-slide="prev">
+                  {/* <button className="carousel-control-prev" type="button" data-bs-target="#relatedThumbnailSlider" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
                   </button>
                   <button className="carousel-control-next" type="button" data-bs-target="#relatedThumbnailSlider" data-bs-slide="next">
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
-                  </button>
+                  </button> */}
             </div>
           </div>
         </div>
@@ -81,26 +83,26 @@ function CourseDetail() {
                   </button>
               <div class="carousel-item active">
                 <div className="row mb-5">
-                  <SingleProduct title="Django API" />
-                  <SingleProduct title="Flask" />
-                  <SingleProduct title="Introduccion a Python" />
-                  <SingleProduct title="Python Product 4 " />
+                  <SingleProduct title="Django API" imgSrc={AcademyImages('./courses/java.png')}/>
+                  <SingleProduct title="Flask" imgSrc={AcademyImages('./courses/java.png')}/>
+                  <SingleProduct title="Introduccion a Python"imgSrc={AcademyImages('./courses/java.png')}/>
+                  <SingleProduct title="Python Product 4 " imgSrc={AcademyImages('./courses/java.png')}/>
                 </div>
               </div>
               <div class="carousel-item">
                 <div className="row mb-5">
-                  <SingleProduct title="Python Product 1 " />
-                  <SingleProduct title="Python Product 2 " />
-                  <SingleProduct title="Python Product 3 " />
-                  <SingleProduct title="Python Product 4 " />
+                  <SingleProduct title="Python Product 1 " imgSrc={AcademyImages('./courses/python.png')} />
+                  <SingleProduct title="Python Product 2 " imgSrc={AcademyImages('./courses/python.png')} />
+                  <SingleProduct title="Python Product 3 " imgSrc={AcademyImages('./courses/python.png')} />
+                  <SingleProduct title="Python Product 4 " imgSrc={AcademyImages('./courses/python.png')} />
                 </div>
               </div>
               <div class="carousel-item">
                 <div className="row mb-5">
-                  <SingleProduct title="Python Product 1 " />
-                  <SingleProduct title="Python Product 2 " />
-                  <SingleProduct title="Python Product 3 " />
-                  <SingleProduct title="Python Product 4 " />
+                  <SingleProduct title="Python Product 1 " imgSrc={AcademyImages('./courses/django.png')}/>
+                  <SingleProduct title="Python Product 2 " imgSrc={AcademyImages('./courses/django.png')} />
+                  <SingleProduct title="Python Product 3 " imgSrc={AcademyImages('./courses/django.png')}/>
+                  <SingleProduct title="Python Product 4 " imgSrc={AcademyImages('./courses/django.png')}/>
                 </div>
               </div>
           </div>

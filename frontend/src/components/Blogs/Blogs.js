@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 
+const AcademyImages = require.context('../../images/blog', true);
+
+
+
+
+
 function Blogs () {
     return(
         <section className="container">
@@ -9,7 +15,7 @@ function Blogs () {
                 {/* category Box */}
                 <div className="col-12 col-md-3 mb-2">
                 <div className="card ">
-                    <img src={ logo } className="card-img-top" alt="..." />
+                    <img src={AcademyImages('./github.png')} className="card-img-top" alt="..." />
                     <div className="card-body">
                     <h4 className="card-title text-center">
                         <Link to="https://es.stackoverflow.com">Stackoverflow</Link>
@@ -23,7 +29,7 @@ function Blogs () {
                         {/* category Box */}
                         <div className="col-12 col-md-3 mb-2">
                 <div className="card">
-                    <img src={ logo } className="card-img-top" alt="..." />
+                    <img src={ AcademyImages('./stackoverflow.png') } className="card-img-top" alt="..." />
                     <div className="card-body">
                     <h4 className="card-title text-center">
                         <Link to="https://github.com/">GitHub</Link>

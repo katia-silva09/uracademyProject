@@ -1,7 +1,8 @@
 
 import { Link } from "react-router-dom";
-import programming from "../programacion.svg"
 import ia from "../IA.svg"
+const AcademyImages = require.context('../images/categorys', true);
+
 
 function Categories() {
   return (
@@ -13,7 +14,7 @@ function Categories() {
         {/* category Box */}
         <div className="col-12 col-md-3 mb-2">
           <div className="card">
-            <img src={ programming } className="card-img-top" alt="..." />
+            <img src={ AcademyImages('./programacion.png') } className="card-img-top" alt="..." />
             <div className="card-body">
               <h4 className="card-title text-center">
                 <Link to="/category/programming/1">Programming</Link>
@@ -24,8 +25,8 @@ function Categories() {
         </div>
         {/* Category Box end */}
 
-                {/* category Box */}
-                <div className="col-12 col-md-3 mb-2">
+        {/* category Box */}
+        <div className="col-12 col-md-3 mb-2">
           <div className="card">
             <img src={ ia } className="card-img-top" alt="..." />
             <div className="card-body">

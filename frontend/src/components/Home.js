@@ -2,10 +2,8 @@ import logo from '../logo.svg'
 import python from '../python.svg'
 import { Link } from "react-router-dom"
 import SingleProduct from './SingleProducts';
-import darwin from '../darwin.svg'
-import marlinis from '../marlinis.svg'
-import eliseo from '../eliseo.svg'
-import perfil from '../perfil.svg'
+
+const AcademyImages = require.context('../images/', true);
 
 function Home() {
   return (
@@ -18,10 +16,10 @@ function Home() {
         {/* latest course section */}
         <h3 className="mt-4" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}> Latest Course<Link to="/course/python-timer/123" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row mb-4">
-          <SingleProduct title="Django basic" />
-          <SingleProduct src={python} title="Python basic" />
-          <SingleProduct title="Django rest" />
-          <SingleProduct title="machine learning" />
+          <SingleProduct title="Java" imgSrc={AcademyImages('./courses/java.png')} />
+          <SingleProduct title="Python basic" imgSrc={AcademyImages('./courses/python.png')}/>
+          <SingleProduct title="Django" imgSrc={AcademyImages('./courses/django.png')} />
+          <SingleProduct title="JavaScrip" imgSrc={AcademyImages('./courses/javascript.png')}/>
 
           {/* categorias populares */}
 
@@ -30,28 +28,54 @@ function Home() {
             {/* category Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-                <img src={logo} className="card-img-top" alt="..." />
+                <img src={AcademyImages('./categorys/INTELIGENCIA ARTIFICIAL.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h4 className="card-title text-center">Cybersecurity</h4>
+                  <h4 className="card-title text-center">
+                  <Link to="/category/cybersecurity/1">Artificial Intelligent</Link>
+                  </h4>
                   <div className="card-footer">Course download 2500</div>
                 </div>
               </div>
             </div>
             {/* Category Box end */}
 
-            {/* Category Box */}
+          {/* Category Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-                <img src={logo} className="card-img-top" alt="..." />
+                <img src={AcademyImages('./categorys/programacion.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
-                  <h4 className="card-title text-center">Programming</h4>
+                  <h4 className="card-title text-center">
+                  <Link to="/category/cybersecurity/1">Programming</Link> </h4>
                   <div className="card-footer">Course download 25500</div>
-
                 </div>
               </div>
             </div>
-          </div>
           {/* Category Box end */}
+          {/* Category Box */}
+            <div className="col-12 col-md-3 mb-2">
+              <div className="card">
+                <img src={AcademyImages('./categorys/estilage.png')} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h4 className="card-title text-center">
+                  <Link to="/category/cybersecurity/1">Estilage</Link> </h4>
+                  <div className="card-footer">Course download 25500</div>
+                </div>
+              </div>
+            </div>
+          {/* Category Box end */}
+          {/* Category Box */}
+            <div className="col-12 col-md-3 mb-2">
+              <div className="card">
+                <img src={AcademyImages('./categorys/ciberseguridad.png')} className="card-img-top" alt="..." />
+                <div className="card-body">
+                  <h4 className="card-title text-center">
+                  <Link to="/category/cybersecurity/1">CiberSecurity</Link> </h4>
+                  <div className="card-footer">Course download 25500</div>
+                </div>
+              </div>
+            </div>
+          {/* Category Box end */}
+          </div>
           {/* end category populares */}
 
           {/* Instructor populares */}
@@ -60,7 +84,7 @@ function Home() {
             {/* instructor Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-                <img src={marlinis} className="card-img-top" alt="..." />
+                <img src={AcademyImages('./instructor/marlon.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Marlon Peralta</h4>
                   <div className="card-footer">
@@ -75,7 +99,7 @@ function Home() {
             {/* instructor Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-                <img src={darwin} className="card-img-top" alt="..." />
+                <img src={AcademyImages('./instructor/darwin.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Darwin Salinas</h4>
                   <div className="card-footer">
@@ -89,7 +113,7 @@ function Home() {
             {/* instructor Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-                <img src={eliseo} className="card-img-top" alt="..." />
+                <img src={AcademyImages('./instructor/eliseo.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Eliseo Davila</h4>
                   <div className="card-footer">
@@ -103,7 +127,7 @@ function Home() {
             {/* instructor Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-                <img src={perfil} className="card-img-top" alt="..." />
+                <img src={AcademyImages('./instructor/perfil.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center" style={{fontFamily: 'Amaranth' , color: 'DarkSlateGray'}}>Bryan Alvarado</h4>
                   <div className="card-footer">
