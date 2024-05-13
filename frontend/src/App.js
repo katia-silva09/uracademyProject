@@ -21,6 +21,8 @@ import Blogs from "./components/Blogs/Blogs";
 import Documentation from "./components/Documentation/Documentation";
 import BoomCircle from './components/BoomCourse';
 import BannerProduct from './components/BannerProduct';
+import AddAddress from './components/Customer/AddAddress';
+import WishList from './components/Customer/WishList';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
     <Route path="/customer/dashboard" element={<Dashboard/>}/>
     <Route path="/customer/Orders" element={<Orders/>}/>
     <Route path="/customer/change-password" element={<ChangePassword/>}/>
+    <Route path="/customer/add-address" element={<AddAddress/>}/>
+    <Route path="/customer/wishlist" element={<WishList/>}/>
 
 
     <Route path="/blogs/" element={<Blogs/>}/>
