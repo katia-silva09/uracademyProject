@@ -11,23 +11,23 @@ function Header() {
         <nav className="navbar bg-body-tertiary">
         </nav>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <Link className="navbar-brand" to="/" style={{ fontFamily: 'Agbalumo', color: 'black', fontSize: 20 }}>URACADEMY</Link>
+          <Link className="navbar-brand" to="/" style={{ fontFamily: 'Agbalumo', color: 'white', fontSize: 20 }}>URACADEMY</Link>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-1">
             <li className="nav-item">
-              <Link className="nav-link" style={{ fontFamily: 'ADLaM Display', color: 'black', fontSize: 20 }} aria-current="page" to="/">Home</Link>
+              <Link className="nav-link" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }} aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/categories" style={{ fontFamily: 'ADLaM Display', color: 'black', fontSize: 20 }}>Category</Link>
+              <Link className="nav-link" to="/categories" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>Category</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/blogs" style={{ fontFamily: 'ADLaM Display', color: 'black', fontSize: 20 }}>Blog</Link>
+              <Link className="nav-link" to="/blogs" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>Blog</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/documentation" style={{ fontFamily: 'ADLaM Display', color: 'black', fontSize: 20 }}>Documentation</Link>
+              <Link className="nav-link" to="/documentation" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>Documentation</Link>
             </li>
             {/* dorpdown */}
             <li className="nav-item dropdown" style={{ fontFamily: 'ADLaM Display' }}>
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ fontFamily: 'ADLaM Display', color: 'black', fontSize: 20 }}>
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>
                 Mi cuenta
               </a>
               <ul className="dropdown-menu">
