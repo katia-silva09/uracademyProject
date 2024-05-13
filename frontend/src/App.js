@@ -20,6 +20,7 @@ import ChangePassword from './components/Customer/ChangePassword';
 import Blogs from "./components/Blogs/Blogs";
 import Documentation from "./components/Documentation/Documentation";
 import BoomCircle from './components/BoomCourse';
+import BannerProduct from './components/BannerProduct';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/boom-circle' element={<BoomCircle />} />
+    <Route path='/banner-product' element={<BannerProduct />} />
     <Route path='categories' element={<Categories/>}/>
     <Route path='/category/:category_slug/:category_id' element={<CategoryCourses/>}/>
     <Route path='courses' element={<AllProducts/>}/>

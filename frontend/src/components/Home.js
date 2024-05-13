@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import SingleProduct from './SingleProducts';
 import BoomCircle from "./BoomCourse";
+import BannerProduct from "./BannerProduct";
 
 const AcademyImages = require.context('../images/', true);
 
@@ -11,18 +12,18 @@ function Home() {
 
     <section style={{ backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 50, paddingBottom: 20 }}>
 
-
       <div className="container">
+        <BannerProduct />
         <h1 className='mb-4 text-center' style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 40 }}>El boom de los idiomas</h1>
         <div className="d-flex justify-content-center">
-          <BoomCircle />
-          <BoomCircle />
-          <BoomCircle />
-          <BoomCircle />
-          <BoomCircle />
-          <BoomCircle />
-          <BoomCircle />
-          <BoomCircle />
+          <BoomCircle title="java" imgSrc={AcademyImages('./courses/java.png')} />
+          <BoomCircle title="react" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="Javascript" imgSrc={AcademyImages('./courses/javascript.png')} />
+          <BoomCircle title="vue" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="PHP" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="python" imgSrc={AcademyImages('./courses/python.png')} />
+          <BoomCircle title="django" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="ensamble" imgSrc={AcademyImages('./courses/django.png')} />
         </div>
         {/* latest course section */}
         <h3 className="mb-4" style={{ fontFamily: 'ADLaM Display', color: 'white' }}> Latest Course<Link to="/course/python-timer/123" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
