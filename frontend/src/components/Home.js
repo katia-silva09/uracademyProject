@@ -10,8 +10,45 @@ function Home() {
 
     <section style={{ backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 50, paddingBottom: 20 }}>
 
-      <div className="container">
 
+      <div className="container">
+        <h1 className='mb-4 text-center' style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 40 }}>El boom de los idiomas</h1>
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+          <div className="rounded-circle overflow-hidden" style={{ width: 60, height: 60, margin: 30 }}>
+            <Link to="/courses"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Circle Image" className="img-fluid" /></Link>
+          </div>
+
+        </div>
         {/* latest course section */}
         <h3 className="mb-4" style={{ fontFamily: 'ADLaM Display', color: 'white' }}> Latest Course<Link to="/course/python-timer/123" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row mb-4">
