@@ -1,13 +1,13 @@
 import React from 'react';
-import image1 from '../assest/banner/uracademy.png';
+import image1 from '../assest/banner/uracademyTec.gif';
 import image2 from '../assest/banner/uracademy.gif'
-import image3 from '../assest/banner/uracademy2.gif';
+import image3 from '../assest/banner/manager.gif';
 
 const BannerProduct = () => {
     const images = [image1, image2, image3];
 
     return (
-        <div id="carouselExampleIndicators" className="carousel slide my-4 text-white p-5" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" className="carousel slide my-1 text-white p-5" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 {images.map((image, index) => (
                     <button key={index} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""} aria-current={index === 0 ? "true" : ""} aria-label={`Slide ${index + 1}`}></button>
