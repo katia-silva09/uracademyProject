@@ -24,10 +24,16 @@ import BannerProduct from './components/BannerProduct';
 import AddAddress from './components/Customer/AddAddress';
 import WishList from './components/Customer/WishList';
 import Profile from './components/Customer/Profile';
+
+//route seller
 import SellerSideBar from './components/seller/SellerSideBar';
 import SellerDashboard from './components/seller/SellerDashboard';
 import AddCourse from './components/seller/AddCourse';
 import Customer from './components/seller/Customer';
+import VendorOrders from './components/seller/VendorOrders'
+import Report from './components/seller/Report';
+import SellerProfile from './components/seller/Profile'
+import SellerChangePassword from './components/seller/ChangePassword'
 
 
 function App() {
@@ -62,8 +68,11 @@ function App() {
         <Route path="/seller/sidebar" element={<SellerSideBar />} />
         <Route path="/seller/dashboard" element={<SellerDashboard />} />
         <Route path="/seller/course" element={<AddCourse />} />
-        <Route path="/seller/add-course" element={<Customer />} />
-
+        <Route path="/seller/customers" element={<Customer />} />
+        <Route path="/seller/orders" element={<VendorOrders />} />
+        <Route path="/seller/reports" element={<Report />} />
+        <Route path="/seller/profile" element={<SellerProfile />} />
+        <Route path="/seller/change-password" element={<SellerChangePassword />} />
       </Routes>
       <Footer />
     </>
