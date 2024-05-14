@@ -28,7 +28,7 @@ function Header() {
             {/* dorpdown */}
             <li className="nav-item dropdown" style={{ fontFamily: 'ADLaM Display' }}>
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>
-                Mi cuenta
+                My account
               </a>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" style={{ color: 'blue' }} to="/customer/register">Register</Link></li>
@@ -40,6 +40,20 @@ function Header() {
             </li>
             {/* end dropdown */}
             {/* <button className="btn btn-danger" style={{fontFamily:'ADLaM Display'}}>Logout</button> */}
+            {/* dorpdown */}
+            <li className="nav-item dropdown" style={{ fontFamily: 'ADLaM Display' }}>
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>
+                Panel Vendor
+              </a>
+              <ul className="dropdown-menu">
+                <li><Link className="dropdown-item" style={{ color: 'blue' }} to="/seller/register">Register</Link></li>
+                <li><Link className="dropdown-item" style={{ color: 'blue' }} to="/seller/login">Login</Link></li>
+                <li><hr className="dropdown-divider" /></li>
+                <li><Link className="dropdown-item" to="/seller/dashboard">Control Panel</Link></li>
+                <li><Link className="dropdown-item" style={{ color: 'red' }} to="/seller/logout">Logout</Link></li>
+              </ul>
+            </li>
+            {/* end dropdown */}
           </ul>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import {Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -23,38 +23,51 @@ import BoomCircle from './components/BoomCourse';
 import BannerProduct from './components/BannerProduct';
 import AddAddress from './components/Customer/AddAddress';
 import WishList from './components/Customer/WishList';
+import Profile from './components/Customer/Profile';
+import SellerSideBar from './components/seller/SellerSideBar';
+import SellerDashboard from './components/seller/SellerDashboard';
+import AddCourse from './components/seller/AddCourse';
+import Customer from './components/seller/Customer';
 
 
 function App() {
   return (
     <>
-    <Header/>
-    <Routes>
-    <Route path='/' element={<Home />} />
-    <Route path='/boom-circle' element={<BoomCircle />} />
-    <Route path='/banner-product' element={<BannerProduct />} />
-    <Route path='categories' element={<Categories/>}/>
-    <Route path='/category/:category_slug/:category_id' element={<CategoryCourses/>}/>
-    <Route path='courses' element={<AllProducts/>}/>
-    <Route path='/course/:course_slug/:course_id' element={<CourseDetail/>}/>
-    <Route path='checkaout' element={<Checkaout/>}/>
-     {/* customer routes */}
-    <Route path="/customer/register" element={<Register/>}/>
-    <Route path="/customer/login" element={<Login/>}/>
-    <Route path="/customer/dashboard" element={<Dashboard/>}/>
-    <Route path="/customer/Orders" element={<Orders/>}/>
-    <Route path="/customer/change-password" element={<ChangePassword/>}/>
-    <Route path="/customer/add-address" element={<AddAddress/>}/>
-    <Route path="/customer/wishlist" element={<WishList/>}/>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/boom-circle' element={<BoomCircle />} />
+        <Route path='/banner-product' element={<BannerProduct />} />
+        <Route path='categories' element={<Categories />} />
+        <Route path='/category/:category_slug/:category_id' element={<CategoryCourses />} />
+        <Route path='courses' element={<AllProducts />} />
+        <Route path='/course/:course_slug/:course_id' element={<CourseDetail />} />
+        <Route path='checkaout' element={<Checkaout />} />
+        {/* customer routes */}
+        <Route path="/customer/register" element={<Register />} />
+        <Route path="/customer/login" element={<Login />} />
+        <Route path="/customer/dashboard" element={<Dashboard />} />
+        <Route path="/customer/Orders" element={<Orders />} />
+        <Route path="/customer/change-password" element={<ChangePassword />} />
+        <Route path="/customer/add-address" element={<AddAddress />} />
+        <Route path="/customer/wishlist" element={<WishList />} />
+        <Route path="/customer/profile" element={<Profile />} />
 
 
-    <Route path="/blogs/" element={<Blogs/>}/>
-    <Route path="/documentation/" element={<Documentation/>}/>
+        <Route path="/blogs/" element={<Blogs />} />
+        <Route path="/documentation/" element={<Documentation />} />
 
-    </Routes>
-    <Footer/>
+
+        {/* seller */}
+        <Route path="/seller/sidebar" element={<SellerSideBar />} />
+        <Route path="/seller/dashboard" element={<SellerDashboard />} />
+        <Route path="/seller/course" element={<AddCourse />} />
+        <Route path="/seller/add-course" element={<Customer />} />
+
+      </Routes>
+      <Footer />
     </>
-);
+  );
 }
 
 export default App;
