@@ -11,7 +11,7 @@ function Home() {
 
 
     <section style={{ backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 20 }}>
-      
+
       <div className="container">
         <h1 className="text-center" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>URACADEMY PROJECT</h1>
         <BannerProduct />
@@ -94,8 +94,41 @@ function Home() {
         </div>
         {/* end category populares */}
 
+        {/* best blogs */}
+        <h3 className='mb-4 ' style={{ fontFamily: 'ADLaM Display', color: 'white', marginTop: 20 }}>best Blogs<Link to="/blogs/" className="float-end btn btn-warning"> View all blogs <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
+        <div className="row">
+          {/* category Box */}
+          <div className="col-12 col-md-3 mb-2">
+            <div className="card ">
+              <img src={AcademyImages('./blog/stackoverflow.png')} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h4 className="card-title text-center">
+                  <Link to="https://stackoverflow.com/documentation">Stackoverflow</Link>
+                </h4>
+              </div>
+              <div className="card-footer">View</div>
+            </div>
+          </div>
+          {/* Category Box end */}
+
+          {/* category Box */}
+          <div className="col-12 col-md-3 mb-2">
+            <div className="card">
+              <img src={AcademyImages('./blog/github.png')} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h4 className="card-title text-center">
+                  <Link to="https://docs.github.com/es">GitHub</Link>
+                </h4>
+              </div>
+              <div className="card-footer">View</div>
+            </div>
+          </div>
+          {/* Category Box end */}
+        </div>
+        {/* End blogs */}
+
         {/* Instructor populares */}
-        <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>Popular instructor<Link to="/" className="float-end btn btn-warning"> View instructor <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
+        <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'white' , marginTop:20}}>Popular instructor<Link to="/" className="float-end btn btn-warning"> View instructor <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row">
           {/* instructor Box */}
           <div className="col-12 col-md-3 mb-2">
