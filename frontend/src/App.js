@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Header from './components/Header';
 import Home from './components/Home';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 import Categories from './components/Categories';
 import CategoryCourses from './components/CategoryCourses';
 import AllProducts from './components/AllProducts';
 import CourseDetail from './components/CourseDetail';
-import Checkaout from './components/Checkout';
+import Checkout from './components/Checkout';
 
 import Register from "./components/Customer/Register";
 import Login from "./components/Customer/Login";
@@ -30,10 +30,12 @@ import SellerSideBar from './components/seller/SellerSideBar';
 import SellerDashboard from './components/seller/SellerDashboard';
 import AddCourse from './components/seller/AddCourse';
 import Customer from './components/seller/Customer';
-import VendorOrders from './components/seller/VendorOrders'
+import VendorOrders from './components/seller/VendorOrders';
 import Report from './components/seller/Report';
-import SellerProfile from './components/seller/Profile'
-import SellerChangePassword from './components/seller/ChangePassword'
+import SellerProfile from './components/seller/Profile';
+import SellerChangePassword from './components/seller/ChangePassword';
+import SellerRegister from './components/seller/SellerRegister';
+import SellerLogin from './components/seller/SellerLogin';
 
 
 function App() {
@@ -48,7 +50,8 @@ function App() {
         <Route path='/category/:category_slug/:category_id' element={<CategoryCourses />} />
         <Route path='courses' element={<AllProducts />} />
         <Route path='/course/:course_slug/:course_id' element={<CourseDetail />} />
-        <Route path='checkaout' element={<Checkaout />} />
+        <Route path='checkaout' element={<Checkout />} />
+
         {/* customer routes */}
         <Route path="/customer/register" element={<Register />} />
         <Route path="/customer/login" element={<Login />} />
@@ -73,6 +76,8 @@ function App() {
         <Route path="/seller/reports" element={<Report />} />
         <Route path="/seller/profile" element={<SellerProfile />} />
         <Route path="/seller/change-password" element={<SellerChangePassword />} />
+        <Route path="/seller/register" element={< SellerRegister />} />
+        <Route path="/seller/login" element={<SellerLogin />} />
       </Routes>
       <Footer />
     </>
