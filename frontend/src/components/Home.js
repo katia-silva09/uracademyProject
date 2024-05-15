@@ -103,7 +103,7 @@ function Home() {
               <img src={AcademyImages('./blog/stackoverflow.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="https://stackoverflow.com/documentation">Stackoverflow</Link>
+                  <Link to="https://stackoverflow.com/documentation" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>Stackoverflow</Link>
                 </h4>
               </div>
               <div className="card-footer">View</div>
@@ -117,7 +117,7 @@ function Home() {
               <img src={AcademyImages('./blog/github.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="https://docs.github.com/es">GitHub</Link>
+                  <Link to="https://docs.github.com/es" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>GitHub</Link>
                 </h4>
               </div>
               <div className="card-footer">View</div>
@@ -128,7 +128,7 @@ function Home() {
         {/* End blogs */}
 
         {/* Instructor populares */}
-        <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'white' , marginTop:20}}>Popular instructor<Link to="/" className="float-end btn btn-warning"> View instructor <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
+        <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'white', marginTop: 20 }}>Popular instructor<Link to="/" className="float-end btn btn-warning"> View instructor <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row">
           {/* instructor Box */}
           <div className="col-12 col-md-3 mb-2">
