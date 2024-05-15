@@ -18,13 +18,13 @@ function Home() {
         <h1 className='mb-4 text-center' style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 40 }}>El boom de los idiomas</h1>
         <div className="d-flex justify-content-center">
           <BoomCircle title="java" imgSrc={AcademyImages('./courses/java.png')} />
-          <BoomCircle title="react" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="react" imgSrc={AcademyImages('./courses/react.svg')} />
           <BoomCircle title="Javascript" imgSrc={AcademyImages('./courses/javascript.png')} />
-          <BoomCircle title="vue" imgSrc={AcademyImages('./courses/django.png')} />
-          <BoomCircle title="PHP" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="TypeScript" imgSrc={AcademyImages('./courses/typescript.svg')} />
+          <BoomCircle title="PHP" imgSrc={AcademyImages('./courses/php.svg')} />
           <BoomCircle title="python" imgSrc={AcademyImages('./courses/python.png')} />
           <BoomCircle title="django" imgSrc={AcademyImages('./courses/django.png')} />
-          <BoomCircle title="ensamble" imgSrc={AcademyImages('./courses/django.png')} />
+          <BoomCircle title="ruby" imgSrc={AcademyImages('./courses/ruby.svg')} />
         </div>
 
         {/* latest course section */}
@@ -221,14 +221,14 @@ function Home() {
               <div className="carousel-item">
                 <figure className="text-center">
                   <blockquote className="blockquote"  >
-                    <p >A well-known quote, contained in a blockquote element.</p>
+                    <p >Ansiosamente esperando un curso de flutter</p>
                   </blockquote>
                   <figcaption className="blockquote-footer">
                     <i className='fa fa-star text-warning'></i>
                     <i className='fa fa-star text-warning'></i>
                     <i className='fa fa-star text-warning'></i>
                     <i className='fa fa-star text-warning'></i>
-                    <cite title="Source Title" style={{ color: 'white' }}> Users Name</cite>
+                    <cite title="Source Title" style={{ color: 'white' }}>Bryan Alvarado</cite>
                   </figcaption>
                 </figure>
               </div>
