@@ -36,6 +36,7 @@ import SellerProfile from './components/seller/Profile';
 import SellerChangePassword from './components/seller/ChangePassword';
 import SellerRegister from './components/seller/SellerRegister';
 import SellerLogin from './components/seller/SellerLogin';
+import SingleCategories from './components/seller/singleCategories';
 
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
         <Route path="/seller/change-password" element={<SellerChangePassword />} />
         <Route path="/seller/register" element={< SellerRegister />} />
         <Route path="/seller/login" element={<SellerLogin />} />
+
       </Routes>
       <Footer />
     </>
