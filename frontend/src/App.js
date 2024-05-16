@@ -36,7 +36,7 @@ import SellerProfile from './components/seller/Profile';
 import SellerChangePassword from './components/seller/ChangePassword';
 import SellerRegister from './components/seller/SellerRegister';
 import SellerLogin from './components/seller/SellerLogin';
-import SingleCategories from './components/seller/singleCategories';
+import Course from './components/seller/Course';
 
 
 function App() {
@@ -71,7 +71,7 @@ function App() {
         {/* seller */}
         <Route path="/seller/sidebar" element={<SellerSideBar />} />
         <Route path="/seller/dashboard" element={<SellerDashboard />} />
-        <Route path="/seller/course" element={<AddCourse />} />
+        <Route path="/seller/add-course" element={<AddCourse />} />
         <Route path="/seller/customers" element={<Customer />} />
         <Route path="/seller/orders" element={<VendorOrders />} />
         <Route path="/seller/reports" element={<Report />} />
@@ -79,6 +79,7 @@ function App() {
         <Route path="/seller/change-password" element={<SellerChangePassword />} />
         <Route path="/seller/register" element={< SellerRegister />} />
         <Route path="/seller/login" element={<SellerLogin />} />
+        <Route path="/seller/course" element={<Course />} />
 
       </Routes>
       <Footer />
