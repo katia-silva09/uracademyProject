@@ -17,7 +17,7 @@ function Home() {
         <BannerProduct />
         <h1 className='mb-4 text-center' style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 40 }}>El boom de los idiomas</h1>
         <div className="d-flex justify-content-center">
-          <BoomCircle title="java" imgSrc={AcademyImages('./courses/java.png')} />
+          <BoomCircle title="java"  imgSrc={AcademyImages('./courses/java.png')}/>
           <BoomCircle title="react" imgSrc={AcademyImages('./courses/react.svg')} />
           <BoomCircle title="Javascript" imgSrc={AcademyImages('./courses/javascript.png')} />
           <BoomCircle title="TypeScript" imgSrc={AcademyImages('./courses/typescript.svg')} />
@@ -30,10 +30,10 @@ function Home() {
         {/* latest course section */}
         <h3 className="mb-4" style={{ fontFamily: 'ADLaM Display', color: 'white' }}> Latest Course<Link to="/course/python-timer/123" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row mb-4">
-          <SingleProduct title="Java" imgSrc={AcademyImages('./courses/java.png')} />
-          <SingleProduct title="Python basic" imgSrc={AcademyImages('./courses/python.png')} />
-          <SingleProduct title="Django" imgSrc={AcademyImages('./courses/django.png')} />
-          <SingleProduct title="JavaScript" imgSrc={AcademyImages('./courses/javascript.png')} />
+          <SingleProduct title="Java" imgSrc={AcademyImages('./courses/java.png')} price="Free"/>
+          <SingleProduct title="Python basic" imgSrc={AcademyImages('./courses/python.png')} price="30"/>
+          <SingleProduct title="Django" imgSrc={AcademyImages('./courses/django.png')} price="500"/>
+          <SingleProduct title="JavaScript" imgSrc={AcademyImages('./courses/javascript.png')} price="100"/>
         </div>
         {/* End course */}
 
@@ -47,7 +47,7 @@ function Home() {
               <img src={AcademyImages('./categorys/INTELIGENCIA ARTIFICIAL.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="/category/cybersecurity/1">Artificial Intelligent</Link>
+                  <Link to="/category/cybersecurity/1">IA</Link>
                 </h4>
                 <div className="card-footer">Course download 2500</div>
               </div>
@@ -73,7 +73,7 @@ function Home() {
               <img src={AcademyImages('./categorys/estilage.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="/category/cybersecurity/1">Estilage</Link> </h4>
+                  <Link to="/category/cybersecurity/1">Estilaje</Link> </h4>
                 <div className="card-footer">Course download 25500</div>
               </div>
             </div>
@@ -124,8 +124,36 @@ function Home() {
             </div>
           </div>
           {/* Category Box end */}
+          {/* category Box */}
+          <div className="col-12 col-md-3 mb-2">
+            <div className="card">
+            <img src={AcademyImages('./courses/c++.png')} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h4 className="card-title text-center">
+                  <Link to="https://devdocs.io/cpp/" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>C++</Link>
+                </h4>
+              </div>
+              <div className="card-footer">View</div>
+            </div>
+          </div>
+          {/* Category Box end */}
+          {/* category Box */}
+          <div className="col-12 col-md-3 mb-2">
+            <div className="card">
+              <img src={AcademyImages('./courses/laravel.png')} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h4 className="card-title text-center">
+                  <Link to="https://laravel.com/docs/11.x/readme" style={{ fontFamily: 'ADLaM Display', color: 'c' }}>laraveL</Link>
+                </h4>
+              </div>
+              <div className="card-footer">View</div>
+            </div>
+          </div>
+          {/* Category Box end */}
         </div>
         {/* End blogs */}
+        
+        
 
         {/* Instructor populares */}
         <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'white', marginTop: 20 }}>Popular instructor<Link to="/" className="float-end btn btn-warning"> View instructor <i className="fa-solid fa-arrow-right-long"></i></Link></h3>

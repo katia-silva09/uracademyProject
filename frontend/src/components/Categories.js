@@ -12,13 +12,13 @@ function Categories() {
 
       {/* Related carousel products */}
       <div id="relatedProductSlider" className="carousel-dark slide" data-bs-ride="true">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
           <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-          <div class="carousel-inner" >
+          <div className="carousel-inner" >
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style={{ width: 40 }}>
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Previous</span>
@@ -27,29 +27,28 @@ function Categories() {
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Next</span>
             </button>
-            <div class="carousel-item active">
+            <div className="carousel-item active">
               <div className="row mb-5">
-                <SingleCategories title='programming' />
-                <SingleCategories title='web design' />
-                <SingleCategories title='cybersecurity' />
-                <SingleCategories title='machine learning' />
-
+                <SingleCategories title='programming' imgSrc={AcademyImages('./programacion.png')} />
+                <SingleCategories title='web design' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
+                <SingleCategories title='cybersecurity' imgSrc={AcademyImages('./ciberseguridad.png')}/>
+                <SingleCategories title='machine learning' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
               </div>
             </div>
-            <div class="carousel-item">
+            <div className="carousel-item">
               <div className="row mb-5">
-                <SingleCategories title='Artificial Intelligent' />
-                <SingleCategories title='movil programming' />
-                <SingleCategories title='admin server' />
-                <SingleCategories title='web development' />
+                <SingleCategories title='Artificial Intelligent' imgSrc={AcademyImages('./ciberseguridad.png')}/>
+                <SingleCategories title='movil programming' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
+                <SingleCategories title='admin server' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
+                <SingleCategories title='web development' imgSrc={AcademyImages('./ciberseguridad.png')}/>
               </div>
             </div>
-            <div class="carousel-item">
+            <div className="carousel-item">
               <div className="row mb-5">
-                <SingleCategories title='software engineer' />
-                <SingleCategories title='data science ' />
-                <SingleCategories title='style' />
-                <SingleCategories title='web support' />
+                <SingleCategories title='software engineer' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
+                <SingleCategories title='data science ' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
+                <SingleCategories title='style' imgSrc={AcademyImages('./estilage.png')}/>
+                <SingleCategories title='web support' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
               </div>
             </div>
           </div>

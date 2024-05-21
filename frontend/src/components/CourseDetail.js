@@ -22,6 +22,7 @@ function CourseDetail() {
             </div>
           </div>
         </div>
+        {/* solo nosotros somos capaces de resolver nuestros problemas */}
         <div className="col-8">
           <h4>React</h4>
           <p>

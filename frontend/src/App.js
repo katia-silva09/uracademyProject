@@ -21,7 +21,6 @@ import Blogs from "./components/Blogs/Blogs";
 import Documentation from "./components/Documentation/Documentation";
 import BoomCircle from './components/BoomCourse';
 import BannerProduct from './components/BannerProduct';
-import AddAddress from './components/Customer/AddAddress';
 import WishList from './components/Customer/WishList';
 import Profile from './components/Customer/Profile';
 
@@ -36,7 +35,7 @@ import SellerProfile from './components/seller/Profile';
 import SellerChangePassword from './components/seller/ChangePassword';
 import SellerRegister from './components/seller/SellerRegister';
 import SellerLogin from './components/seller/SellerLogin';
-import SingleCategories from './components/seller/singleCategories';
+import SellerCourse from './components/seller/SellerCourse';
 
 
 function App() {
@@ -51,7 +50,7 @@ function App() {
         <Route path='/category/:category_slug/:category_id' element={<CategoryCourses />} />
         <Route path='courses' element={<AllProducts />} />
         <Route path='/course/:course_slug/:course_id' element={<CourseDetail />} />
-        <Route path='checkaout' element={<Checkout />} />
+        <Route path='checkout' element={<Checkout />} />
 
         {/* customer routes */}
         <Route path="/customer/register" element={<Register />} />
@@ -59,7 +58,6 @@ function App() {
         <Route path="/customer/dashboard" element={<Dashboard />} />
         <Route path="/customer/Orders" element={<Orders />} />
         <Route path="/customer/change-password" element={<ChangePassword />} />
-        <Route path="/customer/add-address" element={<AddAddress />} />
         <Route path="/customer/wishlist" element={<WishList />} />
         <Route path="/customer/profile" element={<Profile />} />
 
@@ -71,7 +69,8 @@ function App() {
         {/* seller */}
         <Route path="/seller/sidebar" element={<SellerSideBar />} />
         <Route path="/seller/dashboard" element={<SellerDashboard />} />
-        <Route path="/seller/course" element={<AddCourse />} />
+        <Route path="/seller/course" element={<SellerCourse />} />
+        <Route path="/seller/add-course" element={<AddCourse />} />
         <Route path="/seller/customers" element={<Customer />} />
         <Route path="/seller/orders" element={<VendorOrders />} />
         <Route path="/seller/reports" element={<Report />} />

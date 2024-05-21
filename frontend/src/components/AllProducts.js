@@ -1,13 +1,14 @@
 import SingleProduct from "./SingleProducts";
+const AcademyImages = require.context('../images/', true);
 function AllProducts(){
     return(
         <section>
             <h3 className="mb-4">< span className=" text-success"></span> Python Products </h3>
             <div className="row mb-4">
-                <SingleProduct title="Python Product 1 "  image="darwin"/>
-                <SingleProduct title="Python Product 2 "/>
-                <SingleProduct title="Python Product 3 "/>
-                <SingleProduct title="Python Product 4 "/>
+                <SingleProduct title="Python Product 1 " imgSrc={AcademyImages('./courses/python.png')} price='20'/>
+                <SingleProduct title="Python Product 2 "imgSrc={AcademyImages('./courses/python.png')} price='Free'/>
+                <SingleProduct title="Python Product 3 "imgSrc={AcademyImages('./courses/python.png')} price='Free'/>
+                <SingleProduct title="Python Product 4 "imgSrc={AcademyImages('./courses/python.png')} price='Free'/>
             </div>
 
             {/* pagination */}

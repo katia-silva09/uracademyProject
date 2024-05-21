@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 
-const AcademyImages = require.context('../../images/blog', true);
+const AcademyImages = require.context('../../images/', true);
 
 
 
@@ -15,7 +15,7 @@ function Blogs () {
                 {/* category Box */}
                 <div className="col-12 col-md-3 mb-2">
                 <div className="card ">
-                    <img src={AcademyImages('./github.png')} className="card-img-top" alt="..." />
+                    <img src={AcademyImages('./blog/github.png')} className="card-img-top" alt="..." />
                     <div className="card-body">
                     <h4 className="card-title text-center">
                         <Link to="https://es.stackoverflow.com">Stackoverflow</Link>
@@ -29,7 +29,7 @@ function Blogs () {
                         {/* category Box */}
                         <div className="col-12 col-md-3 mb-2">
                 <div className="card">
-                    <img src={ AcademyImages('./stackoverflow.png') } className="card-img-top" alt="..." />
+                    <img src={ AcademyImages('./blog/stackoverflow.png') } className="card-img-top" alt="..." />
                     <div className="card-body">
                     <h4 className="card-title text-center">
                         <Link to="https://github.com/">GitHub</Link>
@@ -38,7 +38,33 @@ function Blogs () {
                     <div className="card-footer">View</div>
                 </div>
                 </div>
-                {/* Category Box end */}      
+                {/* Category Box end */}  
+                 {/* category Box */}
+          <div className="col-12 col-md-3 mb-2">
+            <div className="card">
+            <img src={AcademyImages('./courses/c++.png')} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h4 className="card-title text-center">
+                  <Link to="https://devdocs.io/cpp/" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>C++</Link>
+                </h4>
+              </div>
+              <div className="card-footer">View</div>
+            </div>
+          </div>
+          {/* Category Box end */}
+          {/* category Box */}
+          <div className="col-12 col-md-3 mb-2">
+            <div className="card">
+              <img src={AcademyImages('./courses/laravel.png')} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h4 className="card-title text-center">
+                  <Link to="https://docs.github.com/es" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>laraveL</Link>
+                </h4>
+              </div>
+              <div className="card-footer">View</div>
+            </div>
+          </div>
+          {/* Category Box end */}    
             </div>
                     {/* pagination */}
                     <nav aria-label="Page navigation example">
