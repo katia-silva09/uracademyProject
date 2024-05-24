@@ -1,92 +1,71 @@
-import SingleCategories from "./seller/singleCategories";
 import { Link } from "react-router-dom";
-const AcademyImages = require.context('../images/categorys', true);
-
+import { useState, useEffect } from "react";
 
 function Categories() {
-  return (
-    <section className="container">
-      {/* categorias populares */}
+    const baseUrl = 'http://127.0.0.1:8000/api';
+    const [categories, setCategories] = useState([]);
+    const [totalResult, setTotalResult] = useState(0);
 
-      <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categories</h3>
+    useEffect(() => {
+        fetchData(`${baseUrl}/categories`);
+    }, []);
 
-      {/* Related carousel products */}
-      <div id="relatedProductSlider" className="carousel-dark slide" data-bs-ride="true">
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div className="carousel-inner" >
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style={{ width: 40 }}>
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style={{ width: 40 }}>
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-            <div className="carousel-item active">
-              <div className="row mb-5">
-                <SingleCategories title='programming' imgSrc={AcademyImages('./programacion.png')} />
-                <SingleCategories title='web design' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-                <SingleCategories title='cybersecurity' imgSrc={AcademyImages('./ciberseguridad.png')}/>
-                <SingleCategories title='machine learning' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-              </div>
+    function fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setCategories(data.data);
+                setTotalResult(data.count);
+            });
+    }
+
+    function changeUrl(url) {
+        fetchData(url);
+    }
+
+    const links = [];
+    const limit = 1;
+    const totalLinks = Math.ceil(totalResult / limit);
+
+    for (let i = 1; i <= totalLinks; i++) {
+        links.push(
+            <li className="page-item" key={i}>
+                <Link
+                    onClick={() => changeUrl(baseUrl + `/categories/?page=${i}`)}
+                    to={`/categories/?page=${i}`}
+                    className="page-link"
+                >
+                    {i}
+                </Link>
+            </li>
+        );
+    }
+
+    return (
+        <section className="container mt-4">
+            <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categorias</h3>
+            <div className="row mb-2">
+                {categories.map((category) => (
+                    <div className="col-12 col-md-3 mb-4" key={category.id}>
+                        <div className="card">
+                            <img src={category.image} className="img-thumbnail mb-5" alt={category.title} />
+                            <div className="card-body">
+                                <h4 className="card-title">
+                                    <Link to={`/category/${category.title}/${category.id}`}>{category.title}</Link>
+                                </h4>
+                            </div>
+                            <div className="card-footer">Descargar producto 1234</div>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="carousel-item">
-              <div className="row mb-5">
-                <SingleCategories title='Artificial Intelligent' imgSrc={AcademyImages('./ciberseguridad.png')}/>
-                <SingleCategories title='movil programming' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-                <SingleCategories title='admin server' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-                <SingleCategories title='web development' imgSrc={AcademyImages('./ciberseguridad.png')}/>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="row mb-5">
-                <SingleCategories title='software engineer' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-                <SingleCategories title='data science ' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-                <SingleCategories title='style' imgSrc={AcademyImages('./estilage.png')}/>
-                <SingleCategories title='web support' imgSrc={AcademyImages('./INTELIGENCIA ARTIFICIAL.png')}/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* PAGINATION */}
-      <nav aria-label="Page navigation example" >
-        <ul className="pagination" >
-          <li className="page-item">
-            <a className="page-link bg-primary" style={{ fontFamily: '-moz-initial', color: 'white' }} href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link bg-dark" style={{ fontFamily: '-moz-initial', color: 'white' }} href="#">
-              1
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link bg-dark" style={{ fontFamily: '-moz-initial', color: 'white' }} href="#">
-              2
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link bg-dark" style={{ fontFamily: '-moz-initial', color: 'white' }} href="#">
-              3
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link bg-primary" style={{ fontFamily: '-moz-initial', color: 'white' }} href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      {/* END PAGINATION */}
-    </section>
-  );
+            <nav aria-label="Page navigation example">
+                <ul className="pagination">
+                    {links}
+                </ul>
+            </nav>
+        </section>
+    );
 }
 
 export default Categories;

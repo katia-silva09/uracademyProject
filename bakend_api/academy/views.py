@@ -22,6 +22,16 @@ class CategoryCourse(generics.ListAPIView):
 class CourseList(generics.ListCreateAPIView):
     queryset =models.Course.objects.all()
     serializer_class = serializers.CourseSerializer
+    pagination_classes = pagination.PageNumberPagination
+    
+    def get_queryset(self):
+        qs=super().get_queryset()
+        if 'category' in self.request.GET:
+            category = self.request.GET['category']
+            category = models.CategoryCourse.objects.get(id=category)
+            qs = qs.filter(category=category)
+            
+        return qs
     
 class CourseDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset =models.Course.objects.all()
@@ -70,3 +80,8 @@ class OrderDetail(generics.ListAPIView):
 class CourseRatingViewSet(viewsets.ModelViewSet):
     queryset = models.CoursesRating.objects.all()
     serializer_class= serializers.CourseRatingSerializer
+    
+    
+class CategoryList(generics.ListCreateAPIView):
+    queryset= models.CategoryCourse.objects.all()
+    serializer_class= serializers.CategoryCourseSerializer

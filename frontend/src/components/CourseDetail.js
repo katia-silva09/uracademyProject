@@ -1,51 +1,55 @@
-import SingleProduct from "./SingleProducts";
-import logo from "../logo.svg";
-const AcademyImages = require.context('../images', true);
+import { useParams } from "react-router";
+import { useEffect, useState } from "react";
 
 function CourseDetail() {
+  const baseUrl = "http://127.0.0.1:8000/api";
+  const [CourseData, setCourseData] = useState([]);
+  const [CourseImgs, setCourseImgs] = useState([]);
+  const { course_id } = useParams();
+
+  useEffect(() => {
+    fetchData(baseUrl + "/course/" + course_id);
+  }, [course_id]);
+
+  function fetchData(baseurl) {
+    fetch(baseurl)
+      .then((response) => response.json())
+      .then((data) => {
+        setCourseData(data);
+        setCourseImgs(data.course_imgs || []);
+      });
+  }
+
   return (
     <section className="container mt-4">
-      <h3 className=" mb-4">Detalle del Producto</h3>
+      <h3 className="mb-4">Detalle del curso</h3>
       <div className="row">
         <div className="col-4">
-          <div id="relatedThumbnailSlider" className="carousel-dark slide carousel-fade" data-bs-ride="true">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src={AcademyImages('./courses/python.png')} className="img-thumbnail mb-5 " alt="..." />
-                <div className="carousel-item">
-                  <img src={logo} className="img-thumbnail mb-5 " alt="..." />
+          <div id="relatedThumbnailsSlider" className="carousel carousel-dark slide carousel-fade" data-bs-ride="true">
+            <div className="carousel-inner">
+              {CourseImgs.map((img, index) => (
+                <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                  <img src={img.image} className="img-thumbnail mb-5" alt={`slide ${index}`} />
                 </div>
-                <div className="carousel-item">
-                  <img src={logo} className="img-thumbnail mb-5 " alt="..." />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-        {/* solo nosotros somos capaces de resolver nuestros problemas */}
         <div className="col-8">
-          <h4>React</h4>
-          <p>
-            Descripción: The standard chunk of Lorem Ipsum used since the 1500s
-            is reproduced below for those interested. Sections 1.10.32 and
-            1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-            reproduced in their exact original form, accompanied by English
-            versions from the 1914 translation by H. Rackham.
-          </p>
-          <p className="text-muted">Precio:$500</p>
+          <h4>{CourseData.title}</h4>
+          <p>{CourseData.details}</p>
+          <p className="text-muted">Precio: ${CourseData.price}</p>
           <button title="Demo" target="_blanck" className="btn btn-dark">
             <i className="fa-solid fa-cart-plus"></i>Demo
           </button>
           <button title="Agregar al carrito" target="_blanck" className="btn btn-primary ms-1">
             <i className="fa-solid fa-cart-plus"></i>Agregar al carrito
           </button>
-          <button
-            title="Comprar ahora" target="_blanck" className="btn btn-success ms-1" >
-            <i class="fa-solid fa-credit-card"></i>Comprar ahora
+          <button title="Comprar ahora" target="_blanck" className="btn btn-success ms-1">
+            <i className="fa-solid fa-credit-card"></i>Comprar ahora
           </button>
-          <button
-            title="gregar a la lista" target="_blanck" className="btn btn-danger ms-1">
-            <i class="fa-solid fa-tag"></i>Agregar a la lista
+          <button title="Agregar a la lista" target="_blanck" className="btn btn-danger ms-1">
+            <i className="fa-solid fa-tag"></i>Agregar a la lista
           </button>
         </div>
       </div>
@@ -53,13 +57,13 @@ function CourseDetail() {
       {/* Related carousel products */}
       <h3 className="mt-5 mb-3">Productos Relacionados</h3>
       <div id="relatedProductSlider" className="carousel-dark slide" data-bs-ride="true">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
           <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-          <div class="carousel-inner">
+          <div className="carousel-inner">
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Previous</span>
@@ -68,28 +72,19 @@ function CourseDetail() {
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="visually-hidden">Next</span>
             </button>
-            <div class="carousel-item active">
+            <div className="carousel-item active">
               <div className="row mb-5">
-                <SingleProduct title="Django API" imgSrc={AcademyImages('./courses/java.png')} />
-                <SingleProduct title="Flask" imgSrc={AcademyImages('./courses/java.png')} />
-                <SingleProduct title="Introduccion a Python" imgSrc={AcademyImages('./courses/java.png')} />
-                <SingleProduct title="Python Product 4 " imgSrc={AcademyImages('./courses/java.png')} />
+                {/* Contenido de los productos relacionados */}
               </div>
             </div>
-            <div class="carousel-item">
+            <div className="carousel-item">
               <div className="row mb-5">
-                <SingleProduct title="Python Product 1 " imgSrc={AcademyImages('./courses/python.png')} />
-                <SingleProduct title="Python Product 2 " imgSrc={AcademyImages('./courses/python.png')} />
-                <SingleProduct title="Python Product 3 " imgSrc={AcademyImages('./courses/python.png')} />
-                <SingleProduct title="Python Product 4 " imgSrc={AcademyImages('./courses/python.png')} />
+                {/* Contenido de los productos relacionados */}
               </div>
             </div>
-            <div class="carousel-item">
+            <div className="carousel-item">
               <div className="row mb-5">
-                <SingleProduct title="Python Product 1 " imgSrc={AcademyImages('./courses/django.png')} />
-                <SingleProduct title="Python Product 2 " imgSrc={AcademyImages('./courses/django.png')} />
-                <SingleProduct title="Python Product 3 " imgSrc={AcademyImages('./courses/django.png')} />
-                <SingleProduct title="Python Product 4 " imgSrc={AcademyImages('./courses/django.png')} />
+                {/* Contenido de los productos relacionados */}
               </div>
             </div>
           </div>

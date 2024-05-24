@@ -23,7 +23,7 @@ function Header() {
               <Link className="nav-link" to="/blogs" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>Blog</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/documentation" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>Documentation</Link>
+              <Link className="nav-link" to="/documentations" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 20 }}>Documentation</Link>
             </li>
             {/* dorpdown */}
             <li className="nav-item dropdown" style={{ fontFamily: 'ADLaM Display' }}>

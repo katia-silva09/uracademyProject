@@ -1,12 +1,31 @@
 
 import { Link } from "react-router-dom"
-import SingleProduct from './SingleProducts';
 import BoomCircle from "./BoomCourse";
 import BannerProduct from "./BannerProduct";
+import SingleCourse from "./SingleCourses";
 
-const AcademyImages = require.context('../images/', true);
+ const AcademyImages = require.context('../images/', true);
 
 function Home() {
+  const courses =[
+    {
+    title: "flask",
+    price: 500.00,
+  },
+    {
+    title: "Python",
+    price: 500.00,
+  },
+    {
+    title: "flutter", 
+    price: 500.00,
+  },
+    {
+    title: "React",
+    price: 500.00,
+  },
+    
+  ];
   return (
 
 
@@ -17,7 +36,7 @@ function Home() {
         <BannerProduct />
         <h1 className='mb-4 text-center' style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize: 40 }}>El boom de los idiomas</h1>
         <div className="d-flex justify-content-center">
-          <BoomCircle title="java"  imgSrc={AcademyImages('./courses/java.png')}/>
+          <BoomCircle title="java" imgSrc={AcademyImages('./courses/java.png')} />
           <BoomCircle title="react" imgSrc={AcademyImages('./courses/react.svg')} />
           <BoomCircle title="Javascript" imgSrc={AcademyImages('./courses/javascript.png')} />
           <BoomCircle title="TypeScript" imgSrc={AcademyImages('./courses/typescript.svg')} />
@@ -28,12 +47,10 @@ function Home() {
         </div>
 
         {/* latest course section */}
-        <h3 className="mb-4" style={{ fontFamily: 'ADLaM Display', color: 'white' }}> Latest Course<Link to="/course/python-timer/123" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
+        <h3 className="mb-4" style={{ fontFamily: 'ADLaM Display', color: 'white' }}> Latest Course<Link to="/courses" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row mb-4">
-          <SingleProduct title="Java" imgSrc={AcademyImages('./courses/java.png')} price="Free"/>
-          <SingleProduct title="Python basic" imgSrc={AcademyImages('./courses/python.png')} price="30"/>
-          <SingleProduct title="Django" imgSrc={AcademyImages('./courses/django.png')} price="500"/>
-          <SingleProduct title="JavaScript" imgSrc={AcademyImages('./courses/javascript.png')} price="100"/>
+        {courses.map((course) => 
+          <SingleCourse course={course} />)}
         </div>
         {/* End course */}
 
@@ -127,7 +144,7 @@ function Home() {
           {/* category Box */}
           <div className="col-12 col-md-3 mb-2">
             <div className="card">
-            <img src={AcademyImages('./courses/c++.png')} className="card-img-top" alt="..." />
+              <img src={AcademyImages('./courses/c++.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
                   <Link to="https://devdocs.io/cpp/" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>C++</Link>
@@ -152,8 +169,8 @@ function Home() {
           {/* Category Box end */}
         </div>
         {/* End blogs */}
-        
-        
+
+
 
         {/* Instructor populares */}
         <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'white', marginTop: 20 }}>Popular instructor<Link to="/" className="float-end btn btn-warning"> View instructor <i className="fa-solid fa-arrow-right-long"></i></Link></h3>

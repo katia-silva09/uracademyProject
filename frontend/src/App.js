@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Categories from './components/Categories';
 import CategoryCourses from './components/CategoryCourses';
-import AllProducts from './components/AllProducts';
+import AllCourse from './components/AllCourses';
 import CourseDetail from './components/CourseDetail';
 import Checkout from './components/Checkout';
 
@@ -28,6 +28,7 @@ import Profile from './components/Customer/Profile';
 import SellerSideBar from './components/seller/SellerSideBar';
 import SellerDashboard from './components/seller/SellerDashboard';
 import AddCourse from './components/seller/AddCourse';
+import Course from './components/seller/Course';
 import Customer from './components/seller/Customer';
 import VendorOrders from './components/seller/VendorOrders';
 import Report from './components/seller/Report';
@@ -48,7 +49,7 @@ function App() {
         <Route path='/banner-product' element={<BannerProduct />} />
         <Route path='categories' element={<Categories />} />
         <Route path='/category/:category_slug/:category_id' element={<CategoryCourses />} />
-        <Route path='courses' element={<AllProducts />} />
+        <Route path='/courses' element={<AllCourse />} />
         <Route path='/course/:course_slug/:course_id' element={<CourseDetail />} />
         <Route path='checkout' element={<Checkout />} />
 
@@ -63,7 +64,7 @@ function App() {
 
 
         <Route path="/blogs/" element={<Blogs />} />
-        <Route path="/documentation/" element={<Documentation />} />
+        <Route path="/documentations/" element={<Documentation />} />
 
 
         {/* seller */}
