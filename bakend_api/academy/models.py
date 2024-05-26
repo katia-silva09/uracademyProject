@@ -51,7 +51,7 @@ class CategoryCourse(models.Model):
 class Course(models.Model):
     instructor = models.ForeignKey(Instructor, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(CategoryCourse, on_delete=models.SET_NULL, null=True)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, blank=True)
     details = models.TextField(blank=False, max_length=200)
     duration = models.CharField(max_length=100)
     price  = models.FloatField(null=True)

@@ -24,7 +24,7 @@ function Categories() {
     }
 
     const links = [];
-    const limit = 1;
+    const limit = 4;
     const totalLinks = Math.ceil(totalResult / limit);
 
     for (let i = 1; i <= totalLinks; i++) {
@@ -42,17 +42,17 @@ function Categories() {
     }
    
     return (
-        <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 90 , color:'white'}}>
+        <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250 , color:'white'}}>
         <div className="container" >
             <h3 className="text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categorias</h3>
             <div className="row mb-2">
                 {categories.map((category) => (
                     <div className="col-12 col-md-3 mb-4" key={category.id}>
-                        <div className="card bg-dark">
-                            <img src={category.image} className="img-thumbnail mb-5" alt={category.title} />
-                            <div className="card-body">
-                                <h4 className="card-title text-center">
-                                    <Link to={`/category/${category.title}/${category.id}`}>{category.title}</Link>
+                        <div className="card bg-dark" >
+                            <img src={category.image} className="img-thumbnail mb-5 " alt={category.title} />
+                            <div className="card-body " >
+                                <h4 className="card-title text-center ">
+                                    <Link to={`/category/${category.title}/${category.id}`} style={{fontSize:30, textDecoration: 'none', color:'white'}}>{category.title}</Link>
                                 </h4>
                             </div>
                             <div className="card-footer text-center text-white">Descargar producto 1234</div>

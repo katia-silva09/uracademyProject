@@ -22,7 +22,7 @@ function CourseDetail() {
   }
 
   return (
-    <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 90 , color:'white', fontSize:30}}>
+    <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 90 , color:'white', fontSize:30, textDecoration: 'none' }}>
     <div className="container">
       <br/>
       <h3 className="mb-4" style={{fontSize:40}}>Detalle del curso</h3>
@@ -53,7 +53,7 @@ function CourseDetail() {
           
         </div>
         <div className="col-8">
-          <h4 style={{fontSize:40}}>{CourseData.title}</h4>
+          <h4 style={{fontSize:40, textDecoration: 'none' }}>{CourseData.title}</h4>
           <p style={{fontSize:25}}>{CourseData.details}</p>
           <p style={{fontSize:25}}>Precio: ${CourseData.price}</p>
           <button title="Demo" target="_blanck" className="btn btn-dark">

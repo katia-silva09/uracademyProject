@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'academy.pagination.CustomPagination',
-    'PAGE_SIZE':1
+    'PAGE_SIZE':4
 }
 # REST_FRAMEWORK = {
 #  'DEFAULT_AUTHENTICATION_CLASSES':[

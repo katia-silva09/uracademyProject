@@ -1,61 +1,62 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function Documentation () {
+function Documentation() {
   const baseUrl = 'http://127.0.0.1:8000/api';
   const [documentations, setDocumentations] = useState([]);
-  const[totalResult, setTotalResult] = useState([0]);
+  const [totalResult, setTotalResult] = useState([0]);
 
   useEffect(() => {
     fetchData(`${baseUrl}/documentations`);
   }, []);
 
   function fetchData(url) {
-      fetch(url)
-          .then(response => response.json())
-          .then(data => {
-              setDocumentations(data.data);
-              setTotalResult(data.count);
-          });
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        setDocumentations(data.data);
+        setTotalResult(data.count);
+      });
   }
 
   function changeUrl(url) {
-      fetchData(url);
+    fetchData(url);
   }
 
   const links = [];
-  const limit = 1;
+  const limit = 4;
   const totalLinks = Math.ceil(totalResult / limit);
 
   for (let i = 1; i <= totalLinks; i++) {
-      links.push(
-          <li className="page-item" key={i}>
-              <Link
-                  onClick={() => changeUrl(baseUrl + `/documentations/?page=${i}`)}
-                  to={`/documentations/?page=${i}`}
-                  className="page-link"
-              >
-                  {i}
-              </Link>
-          </li>
-      );
+    links.push(
+      <li className="page-item" key={i}>
+        <Link
+          onClick={() => changeUrl(baseUrl + `/documentations/?page=${i}`)}
+          to={`/documentations/?page=${i}`}
+          className="page-link"
+        >
+          {i}
+        </Link>
+      </li>
+    );
   }
 
-    return (
-      <section className="container mt-4">
-          <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Documentations</h3>
+  return (
+      <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250 , color:'white'}}>
+      <div className="container mt-4">
+          <h3 className="mt-4 text-center" >Documentations</h3>
           <div className="row mb-2">
               {documentations.map((documentation) => (
                 <div className="col-12 col-md-3 mb-2">
-                  <div className="card">
+                  <div className="card bg-dark">
                     <Link to={documentation.url}>
                       <img src={documentation.image} className="card-img-top" alt={documentation.title} />
                     </Link><div className="card-body">
                         <h4 className="card-title text-center">
-                          <Link to={documentation.url}style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>{documentation.title}</Link>
+                          <Link to={documentation.url}style={{ fontFamily: 'ADLaM Display', color: 'white', textDecoration: 'none'  }}>{documentation.title}</Link>
                         </h4>
                       </div>
-                      <div className="card-footer">View</div>
+                      <div className="card-footer text-white text-end" style={{fontSize:20}}>View</div>
                     </div>
                     </div>
               ))}
@@ -65,8 +66,8 @@ function Documentation () {
                   {links}
               </ul>
           </nav>
+      </div>
       </section>
-
-            );
+  );
 }
 export default Documentation;

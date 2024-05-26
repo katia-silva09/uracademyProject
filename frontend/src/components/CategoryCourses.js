@@ -29,7 +29,7 @@ function CategoryCourses(props) {
     }
 
     const links = [];
-    const limit = 1;
+    const limit = 4;
     const totalLinks = Math.ceil(totalResult / limit);
     for (let i = 1; i <= totalLinks; i++) {
         links.push(

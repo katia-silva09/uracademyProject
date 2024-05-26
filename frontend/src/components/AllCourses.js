@@ -32,7 +32,7 @@ function AllCourse(props) {
     }
 
     var links = [];
-    var limit = 1;
+    var limit = 4;
     var totalLinks = totalResult / limit;
     for (let i = 1; i <= totalLinks; i++) {
         links.push(
@@ -48,10 +48,10 @@ function AllCourse(props) {
         );
     }
     return (
-        <section style={{fontFamily:'ADLaM Display', backgroundColor:'DarkSlateGray', color: 'white'}}>
+        <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250 , color:'white'}}>
         <div className="container">
             <br/>
-            <h3 className="mb-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>< span className=" text-success" ></span> All Courses</h3>
+            <h3 className="mb-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20, textDecoration: 'none'  }}>< span className=" text-success" ></span> All Courses</h3>
             <div className="row mb-4">
                 {courses.map((course) => (
                     <SingleCourse course={course} />
