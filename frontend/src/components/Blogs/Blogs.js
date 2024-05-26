@@ -2,13 +2,6 @@ import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import { useState, useEffect } from "react";
 
-
-const AcademyImages = require.context('../../images/', true);
-
-
-
-
-
 function Blogs () {
   const baseUrl = 'http://127.0.0.1:8000/api';
   const [blogs, setBlogs] = useState([]);
@@ -58,7 +51,7 @@ function Blogs () {
                   <div className="card">
                     <Link to={blog.url}>
                       <img src={blog.image} className="card-img-top" alt={blog.title} />
-                    </Link>                  <div className="card-body">
+                    </Link><div className="card-body">
                         <h4 className="card-title text-center">
                           <Link to={blog.url}style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>{blog.title}</Link>
                         </h4>

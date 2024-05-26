@@ -26,14 +26,29 @@ function CourseDetail() {
       <div className="row">
         <div className="col-4">
           <div id="relatedThumbnailsSlider" className="carousel carousel-dark slide carousel-fade" data-bs-ride="true">
+            
             <div className="carousel-inner">
-              {CourseImgs.map((img, index) => (
-                <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                  <img src={img.image} className="img-thumbnail mb-5" alt={`slide ${index}`} />
-                </div>
-              ))}
+            {
+                                CourseImgs.map((img, index) => {
+                                    if (index === 0) {
+                                        return (
+                                            <div className="carousel-item active">
+                                                <img src={img.image} className="img-thumbnail mb-5" alt={index} />
+                                            </div>
+                                        );
+                                    }
+                                    else {
+                                        return (
+                                            <div className="carousel-item">
+                                                <img src={img.image} className="img-thumbnail mb-5" alt={index} />
+                                            </div>
+                                        );
+                                    }
+                                })
+                            }
             </div>
           </div>
+          
         </div>
         <div className="col-8">
           <h4>{CourseData.title}</h4>

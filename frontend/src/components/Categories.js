@@ -40,21 +40,22 @@ function Categories() {
             </li>
         );
     }
-
+   
     return (
-        <section className="container mt-4">
-            <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categorias</h3>
+        <section style={{fontFamily:'ADLaM Display', backgroundColor:'DarkSlateGray', color: 'white'}}>
+        <div className="container" >
+            <h3 className="text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categorias</h3>
             <div className="row mb-2">
                 {categories.map((category) => (
                     <div className="col-12 col-md-3 mb-4" key={category.id}>
-                        <div className="card">
+                        <div className="card bg-dark">
                             <img src={category.image} className="img-thumbnail mb-5" alt={category.title} />
                             <div className="card-body">
-                                <h4 className="card-title">
+                                <h4 className="card-title text-center">
                                     <Link to={`/category/${category.title}/${category.id}`}>{category.title}</Link>
                                 </h4>
                             </div>
-                            <div className="card-footer">Descargar producto 1234</div>
+                            <div className="card-footer text-center text-white">Descargar producto 1234</div>
                         </div>
                     </div>
                 ))}
@@ -63,7 +64,10 @@ function Categories() {
                 <ul className="pagination">
                     {links}
                 </ul>
+                <br/>
             </nav>
+            
+        </div>
         </section>
     );
 }

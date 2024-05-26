@@ -36,7 +36,7 @@ function AllCourse(props) {
     var totalLinks = totalResult / limit;
     for (let i = 1; i <= totalLinks; i++) {
         links.push(
-            <li className="page-item">
+            <li className="page-item" >
                 <Link
                     onClick={() => changeUrl(baseUrl + `/courses/?page=${i}`)}
                     to={`/courses/?page=${i}`}
@@ -48,12 +48,14 @@ function AllCourse(props) {
         );
     }
     return (
-        <section>
-            <h3 className="mb-4">< span className=" text-success"></span> Python Products </h3>
+        <section style={{fontFamily:'ADLaM Display', backgroundColor:'DarkSlateGray', color: 'white'}}>
+        <div className="container">
+            <br/>
+            <h3 className="mb-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>< span className=" text-success" ></span> All Courses</h3>
             <div className="row mb-4">
                 {courses.map((course) => (
                     <SingleCourse course={course} />
-                ))};
+                ))}
             </div>
 
             {/* pagination */}
@@ -61,9 +63,11 @@ function AllCourse(props) {
                 <ul class="pagination">
                     {links}
                 </ul>
+                <br/>
             </nav>
 
             {/* end pagination */}
+        </div>
         </section>
     )
 

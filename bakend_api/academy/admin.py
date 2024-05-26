@@ -18,10 +18,10 @@ admin.site.register(models.CoursesImages)
 class CourseImageInline(admin.StackedInline):
      model = models.CoursesImages
      
-# class CourseAdmin(admin.ModelAdmin):
-#      prepopulated_fields={'title':('title',)}
-#      inlines = [
-#          CourseImageInline
-#      ]
+class CourseAdmin(admin.ModelAdmin):
+      prepopulated_fields={'title':('title',)}
+      inlines = [
+          CourseImageInline
+      ]
 
-# admin.site.register(models.Course)
+admin.site.register(models.Course, CourseAdmin)

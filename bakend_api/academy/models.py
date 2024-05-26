@@ -55,7 +55,7 @@ class Course(models.Model):
     details = models.TextField(blank=False, max_length=200)
     duration = models.CharField(max_length=100)
     price  = models.FloatField(null=True)
-    image=models.ImageField(upload_to='course_imgs/', null= True)
+    image=models.ImageField(upload_to='course_imgs/',null= True)
     
     
     def __str__(self):
@@ -129,6 +129,7 @@ class CoursesImages(models.Model):
         null=True,
         blank=True
     )
+    
     instructor = models.ForeignKey(
         'Instructor',
         on_delete=models.CASCADE,
