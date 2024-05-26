@@ -60,13 +60,13 @@ function Home() {
         <div className="row" >
           {/* category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./categorys/INTELIGENCIA ARTIFICIAL.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="/category/cybersecurity/1">IA</Link>
+                  <Link to="/category/cybersecurity/1" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>IA</Link>
                 </h4>
-                <div className="card-footer">Course download 2500</div>
+                <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>Course download 2500</div>
               </div>
             </div>
           </div>
@@ -74,36 +74,36 @@ function Home() {
 
           {/* Category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./categorys/programacion.png')} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center">
-                  <Link to="/category/cybersecurity/1">Programming</Link> </h4>
-                <div className="card-footer">Course download 25500</div>
+                <h4 className="card-title text-center text-white">
+                  <Link to="/category/cybersecurity/1" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>Programming</Link> </h4>
+                <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>Course download 25500</div>
               </div>
             </div>
           </div>
           {/* Category Box end */}
           {/* Category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./categorys/estilage.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="/category/cybersecurity/1">Estilaje</Link> </h4>
-                <div className="card-footer">Course download 25500</div>
+                  <Link to="/category/cybersecurity/1" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>Estilaje</Link> </h4>
+                <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>Course download 25500</div>
               </div>
             </div>
           </div>
           {/* Category Box end */}
           {/* Category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./categorys/ciberseguridad.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="/category/cybersecurity/1">CiberSecurity</Link> </h4>
-                <div className="card-footer">Course download 25500</div>
+                  <Link to="/category/cybersecurity/1" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>CiberSecurity</Link> </h4>
+                <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>Course download 25500</div>
               </div>
             </div>
           </div>
@@ -116,54 +116,54 @@ function Home() {
         <div className="row">
           {/* category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card ">
+            <div className="card bg-dark">
               <img src={AcademyImages('./blog/stackoverflow.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="https://stackoverflow.com/documentation" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>Stackoverflow</Link>
+                  <Link to="https://stackoverflow.com/documentation" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>Stackoverflow</Link>
                 </h4>
               </div>
-              <div className="card-footer">View</div>
+              <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>View</div>
             </div>
           </div>
           {/* Category Box end */}
 
           {/* category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./blog/github.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="https://docs.github.com/es" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>GitHub</Link>
+                  <Link to="https://docs.github.com/es" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>GitHub</Link>
                 </h4>
               </div>
-              <div className="card-footer">View</div>
+              <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>View</div>
             </div>
           </div>
           {/* Category Box end */}
           {/* category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./courses/c++.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="https://devdocs.io/cpp/" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>C++</Link>
+                  <Link to="https://devdocs.io/cpp/" style={{ fontFamily: 'ADLaM Display', color: 'white'}}>C++</Link>
                 </h4>
               </div>
-              <div className="card-footer">View</div>
+              <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>View</div>
             </div>
           </div>
           {/* Category Box end */}
           {/* category Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./courses/laravel.png')} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title text-center">
-                  <Link to="https://laravel.com/docs/11.x/readme" style={{ fontFamily: 'ADLaM Display', color: 'c' }}>laraveL</Link>
+                  <Link to="https://laravel.com/docs/11.x/readme" style={{ fontFamily: 'ADLaM Display', color: 'white' }}>laraveL</Link>
                 </h4>
               </div>
-              <div className="card-footer">View</div>
+              <div className="card-footer text-center text-white" style={{ fontFamily: 'ADLaM Display', color: 'white', fontSize:20 }}>View</div>
             </div>
           </div>
           {/* Category Box end */}
@@ -177,11 +177,11 @@ function Home() {
         <div className="row">
           {/* instructor Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./instructor/marlon.png')} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'DarkSlateGray' }}>Marlon Peralta</h4>
-                <div className="card-footer">
+                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'white' }}>Marlon Peralta</h4>
+                <div className="card-footer text-center">
                   <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                   <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
                 </div>
@@ -192,10 +192,10 @@ function Home() {
 
           {/* instructor Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./instructor/darwin.png')} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'DarkSlateGray' }}>Darwin Salinas</h4>
+                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'white' }}>Darwin Salinas</h4>
                 <div className="card-footer">
                   <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                   <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
@@ -207,10 +207,10 @@ function Home() {
 
           {/* instructor Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./instructor/eliseo.png')} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'DarkSlateGray' }}>Eliseo Davila</h4>
+                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'white' }}>Eliseo Davila</h4>
                 <div className="card-footer">
                   <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                   <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>
@@ -221,10 +221,10 @@ function Home() {
           {/* instructor Box end */}
           {/* instructor Box */}
           <div className="col-12 col-md-3 mb-2">
-            <div className="card">
+            <div className="card bg-dark">
               <img src={AcademyImages('./instructor/perfil.png')} className="card-img-top" alt="..." />
               <div className="card-body">
-                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'DarkSlateGray' }}>Bryan Alvarado</h4>
+                <h4 className="card-title text-center" style={{ fontFamily: 'Amaranth', color: 'white' }}>Bryan Alvarado</h4>
                 <div className="card-footer">
                   <button title="Agregar al carrito" className='btn btn-warning btn-sm-2'><i class="fa-solid fa-eye"></i></button>
                   <button title="Agregar medalla" className='btn btn-primary btn-sm-2 ms-2'> <i className="fa fa-medal"></i></button>

@@ -48,12 +48,12 @@ class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
     
 class DocumentationList(generics.ListCreateAPIView):
     queryset = models.Documentation.objects.all()
-    serializer_class = serializers.DocumentationDetailSerializer
-    
+    serializer_class = serializers.DocumentationSerializer
 
 class DocumentationDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Documentation.objects.all()
-    serializer_class = serializers.DocumentationDetailSerializer       
+    serializer_class = serializers.DocumentationDetailSerializer
+      
     
 class CustomerList(generics.ListCreateAPIView):
     queryset = models.Customer.objects.all()

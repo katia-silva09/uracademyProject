@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function Blogs () {
+function Documentation () {
   const baseUrl = 'http://127.0.0.1:8000/api';
   const [documentations, setDocumentations] = useState([]);
   const[totalResult, setTotalResult] = useState([0]);
@@ -43,19 +43,19 @@ function Blogs () {
 
     return (
       <section className="container mt-4">
-          <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Documentation</h3>
+          <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Documentations</h3>
           <div className="row mb-2">
               {documentations.map((documentation) => (
                 <div className="col-12 col-md-3 mb-2">
                   <div className="card">
                     <Link to={documentation.url}>
                       <img src={documentation.image} className="card-img-top" alt={documentation.title} />
-                    </Link>                  <div className="card-body">
+                    </Link><div className="card-body">
                         <h4 className="card-title text-center">
                           <Link to={documentation.url}style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>{documentation.title}</Link>
                         </h4>
                       </div>
-                      <div className="card-footer">{documentation.description}</div>
+                      <div className="card-footer">View</div>
                     </div>
                     </div>
               ))}
@@ -69,4 +69,4 @@ function Blogs () {
 
             );
 }
-export default Blogs
+export default Documentation;

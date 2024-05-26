@@ -25,7 +25,7 @@ urlpatterns = [
     path('blog/<int:pk>/', views.BlogDetail.as_view()),
     
     #documentation
-    path('documentations', views.DocumentationList.as_view()),
+    path('documentations/', views.DocumentationList.as_view()),
     path('documentation/<int:pk>/', views.DocumentationDetail.as_view()),
     
     #customer

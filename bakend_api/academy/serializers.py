@@ -10,7 +10,7 @@ class InstructorSerializer(serializers.ModelSerializer):
 
             def __init__(self, *args, **kwargs):
                 super(InstructorSerializer, self).__init__(*args, **kwargs)
-                #self.Meta.depth = 1
+                self.Meta.depth = 1
                 
                     
 class InstructorDetailSerializer(serializers.ModelSerializer):
@@ -21,7 +21,7 @@ class InstructorDetailSerializer(serializers.ModelSerializer):
         
     def __init__(self, *args, **kwargs):
             super(InstructorDetailSerializer, self).__init__(*args, **kwargs)
-            #self.Meta.depth = 1
+            self.Meta.depth = 1
 
 class CategoryCourseSerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,7 +30,7 @@ class CategoryCourseSerializer(serializers.ModelSerializer):
 
     def __init__(self,*args, **kwargs):
         super(CategoryCourseSerializer, self).__init__(*args, **kwargs)
-        #self.Meta.depth = 1
+        self.Meta.depth = 1
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Course
@@ -39,7 +39,7 @@ class CourseSerializer(serializers.ModelSerializer):
         
     def __init__(self, *args, **kwargs):
             super(CourseSerializer, self).__init__(*args, **kwargs)
-            #self.Meta.depth = 1
+            self.Meta.depth = 1
             
 
 class CourseDetailSerializer(serializers.ModelSerializer):
@@ -49,7 +49,7 @@ class CourseDetailSerializer(serializers.ModelSerializer):
                 
             def __init__(self, *args, **kwargs):
                     super(CourseDetailSerializer, self).__init__(*args, **kwargs)
-                    #self.Meta.depth = 1  
+                    self.Meta.depth = 1  
 
 class BlogSerializer(serializers.ModelSerializer):
     class Meta:
@@ -58,7 +58,7 @@ class BlogSerializer(serializers.ModelSerializer):
         
     def __init__(self, *args, **kwargs):
             super(BlogSerializer, self).__init__(*args, **kwargs)
-            #self.Meta.depth = 1    
+            self.Meta.depth = 1    
 
 class BlogDetailSerializer(serializers.ModelSerializer):
     class Meta:
@@ -67,16 +67,16 @@ class BlogDetailSerializer(serializers.ModelSerializer):
 
     def __init__(self, *args, **kwargs):
             super(BlogDetailSerializer, self).__init__(*args, **kwargs)
-            #self.Meta.depth = 1
+            self.Meta.depth = 1
             
 class DocumentationSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Documentation
-        fields = ('id','title', 'description', 'url', 'documentation_imgs', 'image') 
+        fields = ('id','title', 'description', 'url', 'image') 
 
     def __init__(self, *args, **kwargs):
         super(DocumentationSerializer, self).__init__(*args, **kwargs)
-        #self.Meta.depth =1
+        self.Meta.depth =1
         
         
 class DocumentationDetailSerializer(serializers.ModelSerializer):
@@ -104,7 +104,7 @@ class CustomerDetailSerializer(serializers.ModelSerializer):
         
     def __init__(self,*args,**kwargs):
         super(CustomerDetailSerializer,self).__init__(*args, **kwargs)
-        #self.Meta.depth = 1         
+        self.Meta.depth = 1         
         
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
@@ -114,7 +114,7 @@ class OrderSerializer(serializers.ModelSerializer):
     
     def __init__(self, *args, **kwargs):
         super(OrderSerializer, self).__init__(*args,**kwargs)
-        #self.Meta.depth=1    
+        self.Meta.depth=1    
     
        
 

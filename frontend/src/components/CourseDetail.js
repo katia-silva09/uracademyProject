@@ -15,45 +15,47 @@ function CourseDetail() {
     fetch(baseurl)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setCourseData(data);
         setCourseImgs(data.course_imgs || []);
       });
   }
 
   return (
-    <section className="container mt-4">
-      <h3 className="mb-4">Detalle del curso</h3>
+    <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 90 , color:'white', fontSize:30}}>
+    <div className="container">
+      <br/>
+      <h3 className="mb-4" style={{fontSize:40}}>Detalle del curso</h3>
       <div className="row">
         <div className="col-4">
           <div id="relatedThumbnailsSlider" className="carousel carousel-dark slide carousel-fade" data-bs-ride="true">
             
             <div className="carousel-inner">
-            {
-                                CourseImgs.map((img, index) => {
-                                    if (index === 0) {
-                                        return (
-                                            <div className="carousel-item active">
-                                                <img src={img.image} className="img-thumbnail mb-5" alt={index} />
-                                            </div>
-                                        );
-                                    }
-                                    else {
-                                        return (
-                                            <div className="carousel-item">
-                                                <img src={img.image} className="img-thumbnail mb-5" alt={index} />
-                                            </div>
-                                        );
-                                    }
-                                })
-                            }
+              {
+                CourseImgs.map((img, index) => {
+                  if (index === 0) {
+                    return (
+                      <div className="carousel-item active" key={index}>
+                        <img src={img.image} className="img-thumbnail mb-5" alt={index} />
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div className="carousel-item" key={index}>
+                        <img src={img.image} className="img-thumbnail mb-5" alt={index} />
+                      </div>
+                    );
+                  }
+                })
+              }
             </div>
           </div>
           
         </div>
         <div className="col-8">
-          <h4>{CourseData.title}</h4>
-          <p>{CourseData.details}</p>
-          <p className="text-muted">Precio: ${CourseData.price}</p>
+          <h4 style={{fontSize:40}}>{CourseData.title}</h4>
+          <p style={{fontSize:25}}>{CourseData.details}</p>
+          <p style={{fontSize:25}}>Precio: ${CourseData.price}</p>
           <button title="Demo" target="_blanck" className="btn btn-dark">
             <i className="fa-solid fa-cart-plus"></i>Demo
           </button>
@@ -70,7 +72,7 @@ function CourseDetail() {
       </div>
 
       {/* Related carousel products */}
-      <h3 className="mt-5 mb-3">Productos Relacionados</h3>
+      <h3 className="mt-5 mb-3 text-center">Productos Relacionados</h3>
       <div id="relatedProductSlider" className="carousel-dark slide" data-bs-ride="true">
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
           <div className="carousel-indicators">
@@ -105,6 +107,7 @@ function CourseDetail() {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 }

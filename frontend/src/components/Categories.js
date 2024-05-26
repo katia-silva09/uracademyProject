@@ -42,7 +42,7 @@ function Categories() {
     }
    
     return (
-        <section style={{fontFamily:'ADLaM Display', backgroundColor:'DarkSlateGray', color: 'white'}}>
+        <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 90 , color:'white'}}>
         <div className="container" >
             <h3 className="text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categorias</h3>
             <div className="row mb-2">
