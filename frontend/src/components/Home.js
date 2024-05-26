@@ -8,29 +8,31 @@ import { useEffect, useState } from "react";
  const AcademyImages = require.context('../images/', true);
 
 function Home() {
+  const [courses, setCourses] = useState([]);
   const baseUrl = "http://127.0.0.1:8000/api";
-  const [courses, setCourse] = useState([]); 
   const [totalResult, setTotalResult] = useState(0);
 
   useEffect(() => {
-      fetchData(baseUrl + "/courses");
-  }, []);
+      fetchData(baseUrl + "/courses")
+  },
+      []);
 
   function fetchData(baseurl) {
-    fetch(baseurl)
-        .then((response) => response.json())
-        .then((data) => {
-            if (Array.isArray(data.results)) {
-                setCourse(data.results); 
-                setTotalResult(data.count);
-            } else {
-                console.error("La respuesta de la API no contiene un array de cursos:", data.results);
-            }
-        })
-        .catch((error) => {
-            console.error("Error al obtener los datos de la API:", error);
-        });
-}  return (
+
+      fetch(baseurl)
+
+          .then((response) => response.json())
+
+          .then((data) => {
+
+              setCourses(data.data);
+
+              setTotalResult(data.count);
+          });
+  }
+
+
+ return (
 
 
     <section style={{ backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 20 }}>
@@ -51,6 +53,7 @@ function Home() {
         </div>
 
         {/* latest course section */}
+
         <h3 className="mb-4" style={{ fontFamily: 'ADLaM Display', color: 'white' }}> Latest Course<Link to="/courses" className="float-end btn btn-warning"> view all course{" "}<i className="fa-solid fa-arrow-right-long"></i></Link></h3>
         <div className="row mb-4">
          {courses.map((course) =>
