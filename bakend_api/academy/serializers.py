@@ -6,7 +6,7 @@ from . import models
 class InstructorSerializer(serializers.ModelSerializer):
             class Meta:
                 model = models.Instructor
-                fields = ('id','user','name','description','cv', 'linkedin', 'github', 'instructor_ratings', 'instrcutor_imgs')
+                fields = ('id','user','name','description','cv', 'linkedin', 'github', 'instructor_ratings', 'image')
 
             def __init__(self, *args, **kwargs):
                 super(InstructorSerializer, self).__init__(*args, **kwargs)
@@ -16,7 +16,7 @@ class InstructorSerializer(serializers.ModelSerializer):
 class InstructorDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Instructor
-        fields =('id','user','description', 'cv', 'linkedin', 'github', 'image')
+        fields =('id','user','name','description', 'cv', 'linkedin', 'github', 'instructor_ratings', 'instructor_imgs')
         
         
     def __init__(self, *args, **kwargs):
@@ -140,6 +140,7 @@ class CourseImageSerializer(serializers.ModelSerializer):
     course = CourseSerializer(read_only=True)
     coursedetail = CourseDetailSerializer(read_only=True)
     instructor = InstructorSerializer(read_only=True)
+    instructordetail = InstructorDetailSerializer(read_only=True)
     blog = BlogSerializer(read_only=True)
     documentation = DocumentationSerializer(read_only=True)
     customer = CustomerSerializer(read_only=True)

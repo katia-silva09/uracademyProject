@@ -53,20 +53,20 @@ function CourseDetail() {
           
         </div>
         <div className="col-8">
-          <h4 style={{fontSize:40, textDecoration: 'none' }}>{CourseData.title}</h4>
+          <h4 className="text-info" style={{fontSize:40, textDecoration: 'none' }}>{CourseData.title}</h4>
           <p style={{fontSize:25}}>{CourseData.details}</p>
-          <p style={{fontSize:25}}>Precio: ${CourseData.price}</p>
+          <p className="text-warning" style={{fontSize:20}}>Precio: ${CourseData.price}</p>
           <button title="Demo" target="_blanck" className="btn btn-dark">
-            <i className="fa-solid fa-cart-plus"></i>Demo
+            <i className="fa-solid fa-cart-plus"></i> Demo
           </button>
           <button title="Agregar al carrito" target="_blanck" className="btn btn-primary ms-1">
-            <i className="fa-solid fa-cart-plus"></i>Agregar al carrito
+            <i className="fa-solid fa-cart-plus"></i> Agregar al carrito
           </button>
           <button title="Comprar ahora" target="_blanck" className="btn btn-success ms-1">
-            <i className="fa-solid fa-credit-card"></i>Comprar ahora
+            <i className="fa-solid fa-credit-card"></i> Comprar ahora
           </button>
           <button title="Agregar a la lista" target="_blanck" className="btn btn-danger ms-1">
-            <i className="fa-solid fa-tag"></i>Agregar a la lista
+            <i className="fa-solid fa-tag"></i> Agregar a la lista
           </button>
         </div>
       </div>

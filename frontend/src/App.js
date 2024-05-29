@@ -36,6 +36,8 @@ import SellerProfile from './components/seller/Profile';
 import SellerChangePassword from './components/seller/ChangePassword';
 import SellerRegister from './components/seller/SellerRegister';
 import SellerLogin from './components/seller/SellerLogin';
+import Instructor from './components/instructor/Instructor';
+import InstructorDetail from './components/instructor/InstructorDetail';
 
 
 
@@ -44,6 +46,10 @@ function App() {
     <>
       <Header />
       <Routes>
+        {/* instructor */}
+        <Route path='/instuctors' element={<Instructor />} />
+        <Route path='/instuctor/:instructor_slug/:instructor_id' element={<InstructorDetail />} />
+
         <Route path='/' element={<Home />} />
         <Route path='/boom-circle' element={<BoomCircle />} />
         <Route path='/banner-product' element={<BannerProduct />} />

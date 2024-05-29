@@ -48,26 +48,26 @@ function AllCourse(props) {
         );
     }
     return (
-        <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250 , color:'white'}}>
-        <div className="container">
-            <br/>
-            <h3 className="mb-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20, textDecoration: 'none'  }}>< span className=" text-success" ></span> All Courses</h3>
-            <div className="row mb-4">
-                {courses.map((course) => (
-                    <SingleCourse course={course} />
-                ))}
+        <section style={{ fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250, color: 'white' }}>
+            <div className="container">
+                <br />
+                <h3 className="mb-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20, textDecoration: 'none' }}>< span className=" text-success" ></span> All Courses</h3>
+                <div className="row mb-4">
+                    {courses.map((course) => (
+                        <SingleCourse course={course} />
+                    ))}
+                </div>
+
+                {/* pagination */}
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {links}
+                    </ul>
+                    <br />
+                </nav>
+
+                {/* end pagination */}
             </div>
-
-            {/* pagination */}
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    {links}
-                </ul>
-                <br/>
-            </nav>
-
-            {/* end pagination */}
-        </div>
         </section>
     )
 

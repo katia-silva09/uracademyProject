@@ -56,7 +56,7 @@ function Documentation() {
                           <Link to={documentation.url}style={{ fontFamily: 'ADLaM Display', color: 'white', textDecoration: 'none'  }}>{documentation.title}</Link>
                         </h4>
                       </div>
-                      <div className="card-footer text-white text-end" style={{fontSize:20}}>View</div>
+                      <Link   to={documentation.url} className="card-footer text-warning text-end" style={{fontSize:25,textDecoration: 'none'}}>View</Link>
                     </div>
                     </div>
               ))}
