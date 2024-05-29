@@ -48,7 +48,7 @@ function App() {
       <Routes>
         {/* instructor */}
         <Route path='/instuctors' element={<Instructor />} />
-        <Route path='/instuctor/:instructor_slug/:instructor_id' element={<InstructorDetail />} />
+        <Route path='/instructor/:instructor_slug/:instructor_id' element={<InstructorDetail />} />
 
         <Route path='/' element={<Home />} />
         <Route path='/boom-circle' element={<BoomCircle />} />

@@ -129,8 +129,6 @@ function fetchDataInstructor(baseurl) {
         </h3>
         <div className="row">
           {instructors.map((instructor) => <Instructor key={instructor.id} instructor={instructor} />)}
-
-          {/* Añadir más instructores aquí */}
         </div>
         {/* End instructores populares */}
 

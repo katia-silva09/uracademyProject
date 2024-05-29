@@ -36,6 +36,12 @@ class Instructor(models.Model):
     def __str__(self):
         return self.name
 
+# class CategoryInstructor(models.Model):
+#     title = models.CharField(max_length=100)
+#     detail = models.TextField(max_length=200)
+    
+#     def __str__(self):
+#         return self.title
 
 #la categoria del curso, ejemplo: ciberseguridad, desarrollo web, administracion de servidores, entre otros.
 class CategoryCourse(models.Model):

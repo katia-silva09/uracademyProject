@@ -11,17 +11,18 @@ function Instructor(props) {
         <div className="card-body d-flex flex-column shadow">
           <h4 className="card-title text-center">
             <Link 
-              to={`/course/${props.instructor.name}/${props.instructor.id}`} 
+              to={`/instructor/${props.instructor.name}/${props.instructor.id}`} 
               style={{ fontFamily: 'ADLaM Display', color: 'white', textDecoration: 'none' }}>
               {props.instructor.name}
             </Link>
           </h4>
           <div className="mt-auto">
-            <button title="Agregar al carrito" className='btn btn-warning btn-sm'>
-              <i className="fa-solid fa-cart-arrow-down"></i>
+            <button title="Ver" className='btn btn-warning btn-sm'>
+                <i className="fa-regular fa-eye"></i>
+
             </button>
-            <button title="Agregar a la lista" className='btn btn-danger btn-sm ms-2'>
-              <i className="fa fa-heart"></i>
+            <button title="Agregar a la lista" className='btn btn-primary btn-sm ms-2'>
+              <i className="fa fa-medal"></i>
             </button>
           </div>
         </div>

@@ -10,14 +10,14 @@ class InstructorList(generics.ListCreateAPIView):
     serializer_class = serializers.InstructorSerializer
     pagination_classes = pagination.PageNumberPagination
     
-    def get_queryset(self):
-        qs=super().get_queryset()
-        if 'category' in self.request.GET:
-            category = self.request.GET['category']
-            category = models.CategoryCourse.objects.get(id=category)
-            qs = qs.filter(category=category)
+    # def get_queryset(self):
+    #     qs=super().get_queryset()
+    #     if 'category' in self.request.GET:
+    #         category = self.request.GET['category']
+    #         category = models.Categor.objects.get(id=category)
+    #         qs = qs.filter(category=category)
             
-        return qs    
+    #     return qs    
 
 class InstructorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset =models.Instructor.objects.all()
