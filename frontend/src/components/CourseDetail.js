@@ -1,14 +1,19 @@
-import { useParams } from "react-router";
+import { Link,useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import RelatedSingleCourses from "./RelatedSingleCourses";
 
 function CourseDetail() {
   const baseUrl = "http://127.0.0.1:8000/api";
   const [CourseData, setCourseData] = useState([]);
   const [CourseImgs, setCourseImgs] = useState([]);
+  const [relatedCourses, setRelatedCourses] = useState([]);
+
   const { course_id } = useParams();
 
   useEffect(() => {
     fetchData(baseUrl + "/course/" + course_id);
+    fetchRelatedData(baseUrl + "/related-courses/" + course_id);
+
   }, [course_id]);
 
   function fetchData(baseurl) {
@@ -20,6 +25,15 @@ function CourseDetail() {
         setCourseImgs(data.course_imgs || []);
       });
   }
+
+  function fetchRelatedData(url) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setRelatedCourses(data.results);
+      });
+  }
+
 
   return (
     <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 90 , color:'white', fontSize:30, textDecoration: 'none' }}>
@@ -71,43 +85,80 @@ function CourseDetail() {
         </div>
       </div>
 
-      {/* Related carousel products */}
-      <h3 className="mt-5 mb-3 text-center">Productos Relacionados</h3>
-      <div id="relatedProductSlider" className="carousel-dark slide" data-bs-ride="true">
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div className="carousel-inner">
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Next</span>
-            </button>
+      {/* Related carousel Cos */}
+      {relatedCourses.length > 0 && ( 
+        <>      
+        <h3 className="mt-5 mb-3 text-center">Cursos Relacionados</h3>
+        <div
+            id="relatedCourseSlider"
+            className="carousel slide carousel-dark"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-indicators">
+              {relatedCourses.map((course, index) => {
+                if (index === 0) {
+                  return (
+                    <button
+                      type="button"
+                      data-bs-target="#relatedCourseSlider"
+                      data-bs-slide-to={index}
+                      className="active"
+                      aria-current="true"
+                      aria-label="slide 1"
+                    ></button>
+                  );
+                } else {
+                  return (
+                    <button
+                      type="button"
+                      data-bs-target="#relatedCourseSlider"
+                      data-bs-slide-to={index}
+                      className="active"
+                      aria-current="true"
+                      aria-label="slide 1"
+                    ></button>
+                  );
+                }
+              })}
+            </div>
+            <div className="carousel-inner">
+              {relatedCourses.map((course, index) => {
+                if (index === 0) {
+                  return (
+                    <div className="carousel-item active">
+                      <RelatedSingleCourses course={course } />
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div className="carousel-item">
+                      <RelatedSingleCourses course ={course}/>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+
             <div className="carousel-item active">
               <div className="row mb-5">
-                {/* Contenido de los productos relacionados */}
+                {/* Contenido de los Cursos relacionados */}
               </div>
             </div>
             <div className="carousel-item">
               <div className="row mb-5">
-                {/* Contenido de los productos relacionados */}
+                {/* Contenido de los Cursos relacionados */}
               </div>
             </div>
             <div className="carousel-item">
               <div className="row mb-5">
-                {/* Contenido de los productos relacionados */}
+                {/* Contenido de los Cursos relacionados */}
               </div>
             </div>
-          </div>
         </div>
+        </>
+       )}
       </div>
-    </div>
+
     </section>
   );
 }

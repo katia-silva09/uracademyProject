@@ -6,7 +6,7 @@ admin.site.register(models.CategoryCourse)
 admin.site.register(models.Instructor)
 admin.site.register(models.Blog)
 admin.site.register(models.Documentation)
-admin.site.register(models.Customer)
+# admin.site.register(models.Customer)
 admin.site.register(models.Order)
 admin.site.register(models.OrderCourses)
 admin.site.register(models.CoursesRating)
@@ -25,3 +25,9 @@ class CourseAdmin(admin.ModelAdmin):
       ]
 
 admin.site.register(models.Course, CourseAdmin)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display=['username', 'mobile']
+    def username(self,obj):
+        return self.obj.username
+admin.site.register(models.Customer, CustomerAdmin)
+ 

@@ -92,7 +92,7 @@ class DocumentationDetailSerializer(serializers.ModelSerializer):
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model=models.Customer
-        fields=('id','user','email', 'cellphone', 'customer_ratings', 'customer_imgs')
+        fields=('id','user','email', 'mobile', 'customer_ratings', 'customer_imgs')
         
     def __init__(self,*args,**kwargs):
         super(CustomerSerializer,self).__init__(*args, **kwargs)    
@@ -100,7 +100,7 @@ class CustomerSerializer(serializers.ModelSerializer):
 class CustomerDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model=models.Customer
-        fields=('id', 'user', 'email', 'cellphone','image') 
+        fields=('id', 'user', 'email', 'mobile','image') 
         
     def __init__(self,*args,**kwargs):
         super(CustomerDetailSerializer,self).__init__(*args, **kwargs)
