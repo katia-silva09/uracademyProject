@@ -10,8 +10,8 @@ function SingleProduct(props) {
     <div className="col-12 col-md-3 mb-4">
       <div className="card">
         <span class="border border-warning"></span>
-        <Link to="/course/python-timer/123">
-        <img src={imgSrc} className="card-img-top" alt="..." /></Link>
+        <Link to="/course/python-timer/123"></Link>
+        <img src={imgSrc} className="card-img-top" alt="..." />
         <div className="card-body">
           <h4 className="card-title text-center"><Link to="/course/python-timer/123" style={{ fontFamily: 'ADLaM Display', color: 'DarkSlateGray' }}>{props.title}</Link></h4>
           <h5 className="card-title text-muted text-center">Precio: c$500.00</h5>
