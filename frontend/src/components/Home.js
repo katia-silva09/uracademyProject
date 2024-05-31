@@ -3,9 +3,6 @@ import { Link } from "react-router-dom"
 import SingleProduct from './SingleProducts';
 import BoomCircle from "./BoomCourse";
 import BannerProduct from "./BannerProduct";
-import * as React from "react";
-// import { CarouselSize } from "./CarouselSize.js";
-
 
 const AcademyImages = require.context('../images/', true);
 
@@ -38,7 +35,6 @@ function Home() {
           <SingleProduct title="Django" imgSrc={AcademyImages('./courses/django.png')} />
           <SingleProduct title="JavaScript" imgSrc={AcademyImages('./courses/javascript.png')} />
 
-            {/* <CarouselSize /> */}
           {/* categorias populares */}
 
           <h3 className='mb-4' style={{ fontFamily: 'ADLaM Display', color: 'white' }}>Popular categories<Link to="/" className="float-end btn btn-warning"> View Categories <i className="fa-solid fa-arrow-right-long"></i></Link></h3>
@@ -46,8 +42,7 @@ function Home() {
             {/* category Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-              <Link to="/category/cybersecurity/1">
-                <img src={AcademyImages('./categorys/INTELIGENCIA ARTIFICIAL.png')} className="card-img-top" alt="..." /></Link>
+                <img src={AcademyImages('./categorys/INTELIGENCIA ARTIFICIAL.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center">
                     <Link to="/category/cybersecurity/1">Artificial Intelligent</Link>
@@ -61,8 +56,7 @@ function Home() {
             {/* Category Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-              <Link to="/category/cybersecurity/1">
-                <img src={AcademyImages('./categorys/programacion.png')} className="card-img-top" alt="..." /> </Link>
+                <img src={AcademyImages('./categorys/programacion.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center">
                     <Link to="/category/cybersecurity/1">Programming</Link> </h4>
@@ -74,8 +68,7 @@ function Home() {
             {/* Category Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-              <Link to="/category/cybersecurity/1">
-                <img src={AcademyImages('./categorys/estilage.png')} className="card-img-top" alt="..." /> </Link>
+                <img src={AcademyImages('./categorys/estilage.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center">
                     <Link to="/category/cybersecurity/1">Estilage</Link> </h4>
@@ -87,8 +80,7 @@ function Home() {
             {/* Category Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card">
-              <Link to="/category/cybersecurity/1">
-                <img src={AcademyImages('./categorys/ciberseguridad.png')} className="card-img-top" alt="..." /> </Link>
+                <img src={AcademyImages('./categorys/ciberseguridad.png')} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h4 className="card-title text-center">
                     <Link to="/category/cybersecurity/1">CiberSecurity</Link> </h4>
@@ -170,6 +162,8 @@ function Home() {
 
           <div id="carouselExampleIndicators" className="carousel slide my-4  text-white p-5" data-bs-ride="true">
 
+            <div id="carouselExampleIndicators" className="carousel slide my-4  text-white p-5" data-bs-ride="true">
+
               <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -231,6 +225,7 @@ function Home() {
 
           </div>
         </div>
+      </div>
     </section>
   );
 }

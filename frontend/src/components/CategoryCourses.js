@@ -1,5 +1,4 @@
 import SingleProduct from "./SingleProducts";
-const AcademyImages = require.context('../images/', true);
 
 function CategoryCourses() {
   return (
@@ -8,8 +7,9 @@ function CategoryCourses() {
         <span className="text-success">Courses python</span>
       </h3>
       <div className="row mb-4">
-        <SingleProduct imgSrc={AcademyImages('./courses/django.png')}  title="Django" />
-        <SingleProduct imgSrc={AcademyImages('./courses/flask.svg')} title="Flask" />
+        <SingleProduct title="Django" />
+        <SingleProduct title="Flask" />
+        <SingleProduct title="Django Rest Framework" />
       </div>
       {/* end product section */}
 
