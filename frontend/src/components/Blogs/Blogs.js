@@ -1,67 +1,75 @@
 import { Link } from "react-router-dom";
-import logo from "../../logo.svg";
+import { useState, useEffect } from "react";
 
-const AcademyImages = require.context('../../images/blog', true);
+function Blogs() {
+  const baseUrl = 'http://127.0.0.1:8000/api';
+  const [blogs, setBlogs] = useState([]);
+  const [totalResult, setTotalResult] = useState(0);
 
+  useEffect(() => {
+    fetchData(`${baseUrl}/blogs`);
+  }, []);
 
+  function fetchData(url) {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        setBlogs(data.data);
+        setTotalResult(data.count);
+      });
+  }
 
+  function changeUrl(url) {
+    fetchData(url);
+  }
 
+  const links = [];
+  const limit = 4;
+  const totalLinks = Math.ceil(totalResult / limit);
 
-function Blogs () {
-    return(
-        <section className="container">
-            <h3 className="mt-4">Blogs</h3>
-            <div className="row mb-4">
-                {/* category Box */}
-                <div className="col-12 col-md-3 mb-2">
-                <div className="card ">
-                    <img src={AcademyImages('./github.png')} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                    <h4 className="card-title text-center">
-                        <Link to="https://es.stackoverflow.com">Stackoverflow</Link>
-                    </h4>
-                    </div>
-                    <div className="card-footer">View</div>
+  for (let i = 1; i <= totalLinks; i++) {
+    links.push(
+      <li className="page-item" key={i}>
+        <Link
+          onClick={() => changeUrl(baseUrl + `/blogs/?page=${i}`)}
+          to={`/blogs/?page=${i}`}
+          className="page-link"
+        >
+          {i}
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <section style={{ fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250, color: 'white' }}>
+      <div className="container">
+        <h3 className="mt-4 text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Blogs</h3>
+        <div className="row mb-2">
+          {blogs.map((blog) => (
+            <div className="col-12 col-md-3 mb-2" key={blog.id}>
+              <div className="card bg-dark h-100">
+                <Link to={blog.url}>
+                  <img src={blog.image} className="card-img-top img-fluid" alt={blog.title} style={{ height: '300px' }} />
+                </Link>
+                <div className="card-body d-flex flex-column">
+                  <h4 className="card-title text-center flex-grow-">
+                    <Link to={blog.url} style={{ fontFamily: 'ADLaM Display', color: 'white', textDecoration: 'none' }}>{blog.title}</Link>
+                  </h4>
                 </div>
-                </div>
-                {/* Category Box end */}
-
-                        {/* category Box */}
-                        <div className="col-12 col-md-3 mb-2">
-                <div className="card">
-                    <img src={ AcademyImages('./stackoverflow.png') } className="card-img-top" alt="..." />
-                    <div className="card-body">
-                    <h4 className="card-title text-center">
-                        <Link to="https://github.com/">GitHub</Link>
-                    </h4>
-                    </div>
-                    <div className="card-footer">View</div>
-                </div>
-                </div>
-                {/* Category Box end */}      
+                <div className="card-footer text-white text-center">View</div>
+              </div>
             </div>
-                    {/* pagination */}
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                        </ul>
-                    </nav>
-
-                    {/* end pagiantion */}
-        </section>
-    )
-    ;
+          ))}
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul className="pagination">
+            {links}
+          </ul>
+        </nav>
+      </div>
+    </section>
+  );
 }
-export default Blogs
+
+export default Blogs;

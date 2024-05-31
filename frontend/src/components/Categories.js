@@ -1,104 +1,75 @@
-
 import { Link } from "react-router-dom";
-import ia from "../IA.svg"
-const AcademyImages = require.context('../images/categorys', true);
-
+import { useState, useEffect } from "react";
 
 function Categories() {
-  return (
-    <section className="container">
-      {/* categorias populares */}
+    const baseUrl = 'http://127.0.0.1:8000/api';
+    const [categories, setCategories] = useState([]);
+    const [totalResult, setTotalResult] = useState(0);
 
-      <h3 className="mt-4">Categories</h3>
-      <div className="row mb-4">
-        {/* category Box */}
-        <div className="col-12 col-md-3 mb-2">
-          <div className="card">
-            <img src={ AcademyImages('./programacion.png') } className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h4 className="card-title text-center">
-                <Link to="/category/programming/1">Programming</Link>
-              </h4>
-            </div>
-            <div className="card-footer">Course Downloads 202345</div>
-          </div>
-        </div>
-        {/* Category Box end */}
+    useEffect(() => {
+        fetchData(`${baseUrl}/categories`);
+    }, []);
 
-        {/* category Box */}
-        <div className="col-12 col-md-3 mb-2">
-          <div className="card">
-            <img src={ AcademyImages('./INTELIGENCIA ARTIFICIAL.png') } className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h4 className="card-title text-center">
-                <Link to="/category/cybersecurity/1">Artificial Intelligent</Link>
-              </h4>
-            </div>
-            <div className="card-footer">Course Downloads 202345</div>
-          </div>
-        </div>
-        {/* Category Box end */}      
-        {/* category Box */}
-        <div className="col-12 col-md-3 mb-2">
-          <div className="card">
-            <img src={ AcademyImages('./estilage.png') } className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h4 className="card-title text-center">
-                <Link to="/category/cybersecurity/1">Estilage</Link>
-              </h4>
-            </div>
-            <div className="card-footer">Course Downloads 202345</div>
-          </div>
-        </div>
-        {/* Category Box end */}      
-        {/* category Box */}
-        <div className="col-12 col-md-3 mb-2">
-          <div className="card">
-            <img src={ AcademyImages('./ciberseguridad.png') } className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h4 className="card-title text-center">
-                <Link to="/category/cybersecurity/1">Ciber Security</Link>
-              </h4>
-            </div>
-            <div className="card-footer">Course Downloads 202345</div>
-          </div>
-        </div>
-        {/* Category Box end */}      
-      </div>
+    function fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setCategories(data.data);
+                setTotalResult(data.count);
+            });
+    }
 
-      {/* PAGINATION */}
-      <nav aria-label="Page navigation example">
-        <ul className="pagination">
-          <li className="page-item">
-            <a className="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              1
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              2
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#">
-              3
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      {/* END PAGINATION */}
-    </section>
-  );
+    function changeUrl(url) {
+        fetchData(url);
+    }
+
+    const links = [];
+    const limit = 4;
+    const totalLinks = Math.ceil(totalResult / limit);
+
+    for (let i = 1; i <= totalLinks; i++) {
+        links.push(
+            <li className="page-item" key={i}>
+                <Link
+                    onClick={() => changeUrl(baseUrl + `/categories/?page=${i}`)}
+                    to={`/categories/?page=${i}`}
+                    className="page-link"
+                >
+                    {i}
+                </Link>
+            </li>
+        );
+    }
+   
+    return (
+        <section style={{fontFamily: 'ADLaM Display', backgroundColor: 'DarkSlateGray', marginTop: 0, paddingTop: 20, paddingBottom: 250 , color:'white'}}>
+        <div className="container" >
+            <h3 className="text-center" style={{ fontFamily: 'ADLaM Display', fontSize: 40, paddingTop: 2, padding: 20 }}>Categorias</h3>
+            <div className="row mb-2">
+                {categories.map((category) => (
+                    <div className="col-12 col-md-3 mb-4" key={category.id}>
+                        <div className="card bg-dark" >
+                            <img src={category.image} className="img-thumbnail mb-5 " alt={category.title} />
+                            <div className="card-body " >
+                                <h4 className="card-title text-center ">
+                                    <Link to={`/category/${category.title}/${category.id}`} style={{fontSize:30, textDecoration: 'none', color:'white'}}>{category.title}</Link>
+                                </h4>
+                            </div>
+                            <div className="card-footer text-center text-white">Descargar producto 1234</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul className="pagination">
+                    {links}
+                </ul>
+                <br/>
+            </nav>
+            
+        </div>
+        </section>
+    );
 }
 
 export default Categories;

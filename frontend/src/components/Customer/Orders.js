@@ -1,6 +1,9 @@
 import logo from '../../logo.svg';
 import { Link } from 'react-router-dom';
 import Sidebar from "./Sidebar";
+import java from '../../images/courses/java.png'
+import javascript from '../../images/courses/javascript.png';
+import python from '../../images/courses/python.png'
 
 function Orders(props) {
     return (
@@ -23,7 +26,7 @@ function Orders(props) {
                                             <th className='text-center'>Acción</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody className='text-center'>
                                         <tr>
                                             <td className='text-center'>1</td>
                                             <td>
@@ -37,13 +40,13 @@ function Orders(props) {
                                             <td><button className="btn btn-primary btn-sm">Descargas</button></td>
                                         </tr>
 
-                                        <tr>
+                                        <tr >
                                             <td className='text-center'>2</td>
                                             <td>
                                                 <Link to="#">
-                                                    <img src={logo} className="img-thumbnail" width='80' alt="" />
+                                                    <img src={java} className="img-thumbnail" width='80' alt="" />
                                                 </Link>
-                                                <p><Link to="#">Django</Link></p>
+                                                <p><Link to="#">Java</Link></p>
                                             </td>
                                             <td className='text-center'>C$. 500.00</td>
                                             <td><span className="text-success"><i className=" fa fa-check-circle"></i> Completado</span></td>
@@ -53,8 +56,8 @@ function Orders(props) {
                                         <tr>
                                             <td className='text-center'>3</td>
                                             <td>
-                                                <Link><img src={logo} className="img-thumbnail" width='80' alt="..." /></Link>
-                                                <p><Link>Flask</Link></p>
+                                                <Link><img src={javascript} className="img-thumbnail" width='80' alt="..." /></Link>
+                                                <p><Link>JavaScript</Link></p>
                                             </td>
                                             <td className='text-center'>c$500.00</td>
                                             <td><span className="text-warning"><i className="fa fa-spin fa-spinner"></i> procesando</span></td>
@@ -65,8 +68,8 @@ function Orders(props) {
                                             
                                             <td className='text-center'>4</td>
                                             <td>
-                                                <Link><img src={logo} className="img-thumbnail" width='80' alt="..." /></Link>
-                                                <p><Link>ReactJs</Link></p>
+                                                <Link><img src={python} className="img-thumbnail" width='80' alt="..." /></Link>
+                                                <p><Link>python</Link></p>
                                             </td>
                                             <td className='text-center'>c$500.00</td>
                                             <td><span className="text-danger"><i className="fa fa-times-circle"></i> cancelado</span></td>

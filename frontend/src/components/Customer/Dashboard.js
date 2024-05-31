@@ -15,7 +15,7 @@ function Dashboard(props) {
                 <div className="col-md-8 col-12 mb-2"> 
                     <div className="row">
                         <div className="col-md-4 mb-2">
-                            <div className="card">
+                            <div className="card shadow">
                                 <div className="card-body text-center">
                                     <h4>Ordenes Totales</h4>
                                     <h4><a href="#">123</a></h4>
@@ -23,7 +23,7 @@ function Dashboard(props) {
                             </div>
                         </div>
                         <div className="col-md-4 mb-2">
-                            <div className="card">
+                            <div className="card shadow">
                                 <div className="card-body text-center">
                                     <h4>Deseos Totales</h4>
                                     <h4><a href="#">123</a></h4>

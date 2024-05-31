@@ -10,7 +10,8 @@ function BoomCircle(props) {
                         <img src={imgSrc} alt="Circle Image" className="img-fluid" />
                     </Link>
                 </div>
-                <Link to='/courses'><h6 className='text-title' style={{ color: 'white', fontFamily: 'ADLaM Display', margin: 10 }}>{props.title}</h6></Link>
+                    <Link className="nav-link" to='/courses'><h6 style={{ color: 'white', fontFamily: 'ADLaM Display', margin: 10 }}>{props.title}</h6></Link>
+                
             </div>
         </div>
     );

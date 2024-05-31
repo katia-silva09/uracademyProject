@@ -7,10 +7,10 @@ const BannerProduct = () => {
     const images = [image1, image2, image3];
 
     return (
-        <div id="carouselExampleIndicators" className="carousel slide my-1 text-white p-5" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators2" className="carousel slide my-1 text-white p-5" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 {images.map((image, index) => (
-                    <button key={index} type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={index} className={index === 0 ? "active" : ""} aria-current={index === 0 ? "true" : ""} aria-label={`Slide ${index + 1}`}></button>
+                    <button key={index} type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to={index} className={index === 0 ? "active" : ""} aria-current={index === 0 ? "true" : ""} aria-label={`Slide ${index + 1}`}></button>
                 ))}
             </div>
             <div className="carousel-inner">
@@ -20,11 +20,11 @@ const BannerProduct = () => {
                     </div>
                 ))}
             </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
             </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Next</span>
             </button>
