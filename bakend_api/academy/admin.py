@@ -28,6 +28,7 @@ admin.site.register(models.Course, CourseAdmin)
 class CustomerAdmin(admin.ModelAdmin):
     list_display=['username', 'mobile']
     def username(self,obj):
-        return self.obj.username
+        return obj.user.username
+    
 admin.site.register(models.Customer, CustomerAdmin)
  

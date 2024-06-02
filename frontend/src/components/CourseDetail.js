@@ -154,9 +154,14 @@ function CourseDetail() {
               <p className="text-warning" style={{ fontSize: 20 }}>
                 Precio: ${CourseData.price}
               </p>
-              <button title="Demo" target="_blanck" className="btn btn-dark">
-                <i className="fa-solid fa-cart-plus"></i> Demo
-              </button>
+              <Link
+              to={CourseData.demo_url}
+              title="Demo"
+              target="_blank"
+              className="btn btn-dark"
+            >
+              <i className="fa-solid fa-cart-plus"></i> Demo
+            </Link>
               {!cartbuttonClickStatus && (
                 <button
                   title="Agregar al carrito"
