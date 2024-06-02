@@ -53,7 +53,7 @@ function App() {
 
   return (
     <CartContext.Provider value={{cartData, setCartData}}>
-x      <Header />
+      <Header />
       <Routes>
         {/* instructor */}
         <Route path='/instuctors' element={<Instructor />} />

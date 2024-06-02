@@ -1,8 +1,29 @@
 import logo from '../../logo.svg';
 import { Link } from "react-router-dom";
 import SellerSideBar from './SellerSideBar';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 function Customer(props){
+    const [customerData, setCustomerData] = useState([]);
+    const baseUrl = "http://127.0.0.1:8000/api";
+    const { customer_id } = useParams();
+
+    useEffect(() => {
+        fetchData(baseUrl + "/customers/");
+      }, []);
+    
+      function fetchData(baseurl) {
+        fetch(baseurl)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            setCustomerData(data);
+          });
+      }
+    
+
+
     return(
         <div className='container mt-4'>
             <div className='row'>
