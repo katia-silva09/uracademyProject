@@ -10,21 +10,23 @@ function CourseDetail() {
   const [CourseImgs, setCourseImgs] = useState([]);
   const [relatedCourses, setRelatedCourses] = useState([]);
   const [cartbuttonClickStatus, setcartButtonClickStatus] = useState(false);
-  const [cartData, setCartData] = useState(CartContext);
+  
+  // Use the CartContext
+  const { cartData, setCartData } = useContext(CartContext);
 
   const { course_id } = useParams();
 
   useEffect(() => {
     fetchData(baseUrl + "/course/" + course_id);
     fetchRelatedData(baseUrl + "/related-courses/" + course_id);
-    checkcourseInCart(course_id);
+    checkCourseInCart(course_id);
   }, [course_id]);
 
-  function checkcourseInCart(course_id) {
+  function checkCourseInCart(course_id) {
     var previousCart = localStorage.getItem("cartData");
     var cartJson = JSON.parse(previousCart);
     if (cartJson != null) {
-      cartJson.map((cart) => {
+      cartJson.forEach((cart) => {
         if (cart != null && cart.course.id == course_id) {
           setcartButtonClickStatus(true);
         }
@@ -49,10 +51,11 @@ function CourseDetail() {
         setRelatedCourses(data.results);
       });
   }
+
   const cartAddButtonHandler = () => {
     var previousCart = localStorage.getItem("cartData");
     var cartJson = JSON.parse(previousCart);
-    var cartData = {
+    var newCartItem = {
       course: {
         id: CourseData.id,
         title: CourseData.title,
@@ -63,17 +66,15 @@ function CourseDetail() {
         id: 1,
       },
     };
+
     if (cartJson != null) {
-      cartJson.push(cartData);
-      var cartString = JSON.stringify(cartJson);
-      localStorage.setItem("cartData", cartString);
-      setCartData(cartJson);
+      cartJson.push(newCartItem);
     } else {
-      var newCartList = [];
-      newCartList.push(cartData);
-      cartString = JSON.stringify(newCartList);
-      localStorage.setItem("cartData", cartString);
+      cartJson = [newCartItem];
     }
+
+    localStorage.setItem("cartData", JSON.stringify(cartJson));
+    setCartData(cartJson);
     console.log("agregado al carrito");
     setcartButtonClickStatus(true);
   };
@@ -81,20 +82,14 @@ function CourseDetail() {
   const cartRemoveButtonHandler = () => {
     var previousCart = localStorage.getItem("cartData");
     var cartJson = JSON.parse(previousCart);
-    cartJson.map((cart, index) => {
-      if (cart != null && cart.course.id === CourseData.id) {
-        // delete cartJson[index];
-        cartJson.splice(index, 1);
-      }
-      return null; // Add this line to fix the issue
-    });
-    var cartString = JSON.stringify(cartJson);
-    localStorage.setItem("cartData", cartString);
+    cartJson = cartJson.filter(cart => cart.course.id !== CourseData.id);
+
+    localStorage.setItem("cartData", JSON.stringify(cartJson));
+    setCartData(cartJson);
     console.log("Eliminado del carrito");
     setcartButtonClickStatus(false);
-    setCartData(cartJson);
-
   };
+
   
     return (
       <section
