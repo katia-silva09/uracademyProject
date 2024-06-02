@@ -41,11 +41,19 @@ import Instructor from './components/instructor/Instructor';
 import InstructorDetail from './components/instructor/InstructorDetail';
 
 
+import { CartContext} from './Context';
+import { useState } from "react";
+const checkCart = localStorage.getItem ('cartData')
+
+
+
 
 function App() {
+  const [cartData, setCartData] = useState(JSON.parse(checkCart));
+
   return (
-    <>
-      <Header />
+    <CartContext.Provider value={{cartData, setCartData}}>
+x      <Header />
       <Routes>
         {/* instructor */}
         <Route path='/instuctors' element={<Instructor />} />
@@ -90,7 +98,7 @@ function App() {
 
       </Routes>
       <Footer />
-    </>
+    </CartContext.Provider>
   );
 }
 
