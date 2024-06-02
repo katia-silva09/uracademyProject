@@ -61,6 +61,7 @@ class Course(models.Model):
     details = models.TextField(blank=False, max_length=200)
     duration = models.CharField(max_length=100)
     price  = models.FloatField(null=True)
+    demo_url = models.URLField(null= True,blank=True)
     image=models.ImageField(upload_to='course_imgs/',null= True)
     
     
@@ -92,7 +93,7 @@ class  Customer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField(blank=True)
     image=models.ImageField(upload_to='customer_imgs/', null= True)
-    cellphone = models.PositiveBigIntegerField(unique=True)
+    mobile = models.PositiveBigIntegerField(unique=True)
     
     def __str__(self):
         return self.user.username

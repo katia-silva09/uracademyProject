@@ -49,7 +49,9 @@ function Categories() {
                 {categories.map((category) => (
                     <div className="col-12 col-md-3 mb-4" key={category.id}>
                         <div className="card bg-dark" >
+                        <Link to={`/category/${category.title}/${category.id}`}>
                             <img src={category.image} className="img-thumbnail mb-5 " alt={category.title} />
+                            </Link>
                             <div className="card-body " >
                                 <h4 className="card-title text-center ">
                                     <Link to={`/category/${category.title}/${category.id}`} style={{fontSize:30, textDecoration: 'none', color:'white'}}>{category.title}</Link>

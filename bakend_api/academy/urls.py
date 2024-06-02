@@ -19,6 +19,8 @@ urlpatterns = [
     #course
     path('courses/', views.CourseList.as_view()),
     path('course/<int:pk>/', views.CourseDetail.as_view()),
+    path('related-courses/<int:pk>/', views.RelatedCourseList.as_view()),
+
     
     #blog
     path('blogs/', views.BlogList.as_view()),
@@ -31,6 +33,11 @@ urlpatterns = [
     #customer
     path('customers/', views.CustomerList.as_view()),
     path('customer/<int:pk>', views.CustomerDetail.as_view()),
+    path('customer/login/', views.customer_login, name='customer_login'),
+    path('customer/register/', views.customer_register, name='customer_register'),
+
+
+    
     path('orders/',  views.OrderList.as_view()),
     path('order/<int:pk>', views.OrderDetail.as_view()),
     
