@@ -25,13 +25,14 @@ function CourseDetail() {
   function checkCourseInCart(course_id) {
     var previousCart = localStorage.getItem("cartData");
     var cartJson = JSON.parse(previousCart);
-    if (cartJson != null) {
       cartJson.forEach((cart) => {
-        if (cart != null && cart.course.id == course_id) {
-          setcartButtonClickStatus(true);
-        }
-      });
-    }
+        if (cart && cart.course && cart.course.id === course_id) {
+          setcartButtonClickStatus(true)
+        }else {
+            setcartButtonClickStatus(false);
+          }
+        } 
+      );
   }
 
   function fetchData(baseurl) {
@@ -82,8 +83,13 @@ function CourseDetail() {
   const cartRemoveButtonHandler = () => {
     var previousCart = localStorage.getItem("cartData");
     var cartJson = JSON.parse(previousCart);
-    cartJson = cartJson.filter(cart => cart.course.id !== CourseData.id);
+    cartJson.map((cart, index) => {
 
+    if (cart && cart.course && cart.course.id == course_id) {
+          cartJson.splice(index, 1);
+    }
+      return null;
+  });
     localStorage.setItem("cartData", JSON.stringify(cartJson));
     setCartData(cartJson);
     console.log("Eliminado del carrito");
