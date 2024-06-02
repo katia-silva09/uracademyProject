@@ -37,8 +37,8 @@ function InstructorDetail(props) {
     >
       <div className="container">
         <br />
-        <h3 className="mb-4" style={{ fontSize: 40 , fontFamily:'Angkor'}}>
-          Perfil {InstructorData.name}
+        <h3 className="mb-4" style={{ fontSize: 40, fontFamily: 'Angkor' }}>
+          Perfil Instructor
         </h3>
         <div className="row">
           <div className="col-12 col-md-4 d-flex flex-column align-items-center">
@@ -64,19 +64,35 @@ function InstructorDetail(props) {
                 })}
               </div>
             </div>
-            <h4 className="text-white text-center" style={{ fontSize: 40, textDecoration: 'none', fontFamily: 'Montserrat, sans-serif' }}>
+            <h4 className="text-white text-center" style={{ fontSize: 40, textDecoration: 'none', fontFamily: 'ADLaM Display' }}>
               {InstructorData.name}
             </h4>
-            <Link
-              to={InstructorData.github}
-              className="text-warning text-center"
-              style={{ fontSize: 20, textDecoration: 'none', fontFamily: 'Montserrat, sans-serif' }}
-            >
-              <i className="fa-brands fa-github"></i> {InstructorData.name}
-            </Link>
+            <div className="d-flex justify-content-center">
+              <Link
+                to={InstructorData.github}
+                className="text-white text-center mx-3"
+                style={{ fontSize: 20, textDecoration: 'none', fontFamily: 'Montserrat, sans-serif' }}
+              >
+                <i className="fa-brands fa-github fa-2x"></i>
+              </Link>
+              <Link
+                to={InstructorData.linkedin}
+                className="text-info text-center mx-3"
+                style={{ fontSize: 20, textDecoration: 'none', fontFamily: 'Montserrat, sans-serif' }}
+              >
+                <i className="fa-brands fa-linkedin fa-2x"></i>
+              </Link>
+              <Link
+                to={InstructorData.linkedin}
+                className="text-white text-center mx-3"
+                style={{ fontSize: 20, textDecoration: 'none', fontFamily: 'Montserrat, sans-serif' }}
+              >
+                <i className="fa-solid fa-user-tie fa-2x"></i>
+              </Link>
+            </div>
           </div>
-          <div className="col-12 col-md-6 d-flex align-items-start">
-            <p style={{ fontSize: 20, fontFamily: 'Open Sans, sans-serif' }}>{InstructorData.description}</p>
+          <div className="col-12 col-md-8 d-flex align-items-start">
+            <p style={{ fontSize: 30, fontFamily: 'ADLaM Display' }}>{InstructorData.description}</p>
           </div>
         </div>
       </div>
