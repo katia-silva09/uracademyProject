@@ -44,6 +44,7 @@ urlpatterns = [
         #categorys
     path('categories/', views.CategoryList.as_view()),
     path('category/<int:pk>', views.CategoryList.as_view()),
+    path('related-categories/<int:pk>', views.CategoryList.as_view()),
 
 ]
 

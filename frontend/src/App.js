@@ -11,6 +11,7 @@ import AllCourse from './components/AllCourses';
 import CourseDetail from './components/CourseDetail';
 import Checkout from './components/Checkout';
 import RelatedSingleCourses from './components/RelatedSingleCourses';
+import RelatedCategories from './components/RelatedCategories';
 
 import Register from "./components/Customer/Register";
 import Login from "./components/Customer/Login";
@@ -67,6 +68,7 @@ function App() {
         <Route path='/courses' element={<AllCourse />} />
         <Route path='/course/:course_slug/:course_id' element={<CourseDetail />} />
         <Route path= '/related-courses/:course_slug/:course_id' element={<RelatedSingleCourses />} />       
+        <Route path= '/related-categories/:category_slug/:categoru_id' element={<RelatedCategories />} />       
         <Route path='checkout' element={<Checkout />} />
 
         {/* customer routes */}
