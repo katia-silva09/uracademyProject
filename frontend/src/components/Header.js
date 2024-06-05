@@ -46,7 +46,7 @@ function Header() {
                 Panel Vendor
               </a>
               <ul className="dropdown-menu">
-                <li><Link className="dropdown-item" style={{ color: 'blue' }} to="/customer/register">Register</Link></li>
+                <li><Link className="dropdown-item" style={{ color: 'blue' }} to="/seller/register">Register</Link></li>
                 <li><Link className="dropdown-item" style={{ color: 'blue' }} to="/customer/login">Login</Link></li>
                 <li><hr className="dropdown-divider" /></li>
                 <li><Link className="dropdown-item" to="/seller/dashboard">Control Panel</Link></li>

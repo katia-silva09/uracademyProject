@@ -1,9 +1,11 @@
 from django.contrib import admin
 from . import models
+from .models import Instructor
+from .serializers import InstructorSerializer
 # Register your models here.
 admin.site.register(models.CategoryCourse)
 #admin.site.register(models.UserLocal)
-admin.site.register(models.Instructor)
+# admin.site.register(models.Instructor)
 admin.site.register(models.Blog)
 admin.site.register(models.Documentation)
 # admin.site.register(models.Customer)
@@ -31,4 +33,8 @@ class CustomerAdmin(admin.ModelAdmin):
         return obj.user.username
     
 admin.site.register(models.Customer, CustomerAdmin)
- 
+
+class InstructorAdmin(admin.ModelAdmin):
+    serializer = InstructorSerializer
+
+admin.site.register(Instructor, InstructorAdmin)
