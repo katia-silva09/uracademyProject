@@ -27,10 +27,10 @@ class Instructor(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null= False)
     image=models.ImageField(upload_to='instructor_imgs/', null= True)
-    description = models.TextField(blank=False)
-    cv = models.URLField(null=True)
-    linkedin=  models.URLField(null=True)
-    github= models.URLField(null=True)
+    description = models.TextField(blank=True)
+    cv = models.URLField(null=True, blank=True)
+    linkedin=  models.URLField(null=True, blank=True)
+    github= models.URLField(null=True, blank=True)
     
     
     def __str__(self):
