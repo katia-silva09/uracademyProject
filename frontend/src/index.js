@@ -5,19 +5,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserContext } from './Context';
+import { SellerContext } from './SellerContex';
 
+const checkInstructor = localStorage.getItem("instructor_login");
 const checkCustomer = localStorage.getItem("customer_login")
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <UserContext.Provider value={checkCustomer} >
-        <App />
+      {/* Proporciona tanto el contexto del usuario como el del vendedor */}
+      <UserContext.Provider value={checkCustomer}>
+        <SellerContext.Provider value={checkInstructor}>
+          <App />
+        </SellerContext.Provider>
       </UserContext.Provider>
     </Router>
   </React.StrictMode>
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

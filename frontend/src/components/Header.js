@@ -165,16 +165,16 @@ function Header() {
                 Panel Instructor
               </a>
               <ul className="dropdown-menu">
-                {sellerContext !== "true" && (
+              {sellerContext !== "true" && (
                   <>
                     <li>
-                      <Link className="dropdown-item" to="/seller/Register">
+                      <Link className="dropdown-item" to="/seller/register">
                         Register
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/seller/Login">
-                        login
+                      <Link className="dropdown-item" to="/seller/login">
+                        Login
                       </Link>
                     </li>
                   </>
@@ -185,7 +185,10 @@ function Header() {
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/seller/dashboard">
+                      <Link
+                        className="dropdown-item"
+                        to="/seller/dashboard"
+                      >
                         Panel
                       </Link>
                     </li>
@@ -193,7 +196,7 @@ function Header() {
                       <Link
                         className="dropdown-item"
                         style={{ color: "red" }}
-                        to="/seller/Logout"
+                        to="/seller/logout"
                       >
                         Logout
                       </Link>
