@@ -12,7 +12,7 @@ urlpatterns = [
     #instructor
     path('instructors/', views.InstructorList.as_view()),
     path('instructor/<int:pk>/', views.InstructorDetail.as_view()),
-    path('instructor/login/', views.Instructor_login, name='instructor_login'),
+    path('instructor/login/', views.instructor_login, name='instructor_login'),
     path('instructor/register/', views.Instructor_register, name='instructor_register'),
 
     

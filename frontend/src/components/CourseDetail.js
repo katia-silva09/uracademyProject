@@ -25,23 +25,32 @@ function CourseDetail() {
   function checkCourseInCart(course_id) {
     var previousCart = localStorage.getItem("cartData");
     var cartJson = JSON.parse(previousCart);
+    
+    if (cartJson && Array.isArray(cartJson)) {
       cartJson.forEach((cart) => {
         if (cart && cart.course && cart.course.id === course_id) {
-          setcartButtonClickStatus(true)
-        }else {
-            setcartButtonClickStatus(false);
-          }
-        } 
-      );
+          setcartButtonClickStatus(true);
+          return; 
+        }
+      });
+      
+      setcartButtonClickStatus(false);
+    } else {
+      setcartButtonClickStatus(false);
+    }
   }
-
+  
   function fetchData(baseurl) {
     fetch(baseurl)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setCourseData(data);
-        setCourseImgs(data.course_imgs || []);
+        if (data) {
+          console.log(data);
+          setCourseData(data);
+          setCourseImgs(data.course_imgs || []);
+        } else {
+          console.error("Data is null or undefined");
+        }
       });
   }
 

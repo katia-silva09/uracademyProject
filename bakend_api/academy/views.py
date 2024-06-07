@@ -23,7 +23,7 @@ from django.dispatch import receiver
 
 
 @csrf_exempt
-def Instructor_login(request):
+def instructor_login(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
     user = authenticate(username=username, password=password)

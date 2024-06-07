@@ -12,12 +12,16 @@ import CourseDetail from './components/CourseDetail';
 import Checkout from './components/Checkout';
 import RelatedSingleCourses from './components/RelatedSingleCourses';
 import RelatedCategories from './components/RelatedCategories';
+import LoginAll from './components/LoginAll';
+import RegisterAll from './components/RegisterAll';
 
 import Register from "./components/Customer/Register";
 import Login from "./components/Customer/Login";
 import Dashboard from "./components/Customer/Dashboard";
 import Orders from "./components/Customer/Orders";
 import ChangePassword from './components/Customer/ChangePassword';
+import CustomerLogout from "./components/Customer/CustomerLogout";
+
 
 import Blogs from "./components/Blogs/Blogs";
 import Documentation from "./components/Documentation/Documentation";
@@ -35,6 +39,7 @@ import Customer from './components/seller/Customer';
 import VendorOrders from './components/seller/VendorOrders';
 import Report from './components/seller/Report';
 import SellerProfile from './components/seller/Profile';
+import SellerLogout from './components/seller/SellerLogout';
 import SellerChangePassword from './components/seller/ChangePassword';
 import RegisterInstructor from './components/instructor/SellerRegister';
 import SellerLogin from './components/seller/SellerLogin';
@@ -60,7 +65,9 @@ function App() {
         <Route path='/instuctors' element={<Instructor />} />
         <Route path='/instructor/:instructor_slug/:instructor_id' element={<InstructorDetail />} />
 
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<LoginAll />} />
+        <Route path='/register-all' element={<RegisterAll />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/boom-circle' element={<BoomCircle />} />
         <Route path='/banner-product' element={<BannerProduct />} />
         <Route path='categories' element={<Categories />} />
@@ -74,6 +81,7 @@ function App() {
         {/* customer routes */}
         <Route path="/customer/register" element={<Register />} />
         <Route path="/customer/login" element={<Login />} />
+        <Route path="/customer/logout" element={<CustomerLogout/>}/>
         <Route path="/customer/dashboard" element={<Dashboard />} />
         <Route path="/customer/Orders" element={<Orders />} />
         <Route path="/customer/change-password" element={<ChangePassword />} />
@@ -96,6 +104,7 @@ function App() {
         <Route path="/seller/change-password" element={<SellerChangePassword />} />
         <Route path="/seller/register" element={< RegisterInstructor />} />
         <Route path="/seller/login" element={<SellerLogin />} />
+        <Route path="/seller/logout" element={<SellerLogout />} />
         <Route path="/seller/course" element={<Course />} />
 
       </Routes>
